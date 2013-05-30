@@ -25,6 +25,16 @@
 		A7145E891744650E0051C1A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7145E5E1744650D0051C1A1 /* Foundation.framework */; };
 		A7145E911744650E0051C1A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7145E8F1744650E0051C1A1 /* InfoPlist.strings */; };
 		A7145E941744650E0051C1A1 /* FlyNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145E931744650E0051C1A1 /* FlyNotesTests.m */; };
+		A7145E9F174CEE520051C1A1 /* NotesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145E9E174CEE520051C1A1 /* NotesParser.m */; };
+		A7145EA9174D9F7E0051C1A1 /* TextNoteEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EA8174D9F7E0051C1A1 /* TextNoteEvent.m */; };
+		A7145EAC174DA02D0051C1A1 /* ScribbleNoteEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EAB174DA02D0051C1A1 /* ScribbleNoteEvent.m */; };
+		A7145EAF174DA06B0051C1A1 /* NotesScribblePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EAE174DA06B0051C1A1 /* NotesScribblePage.m */; };
+		A7145EB1174DA0810051C1A1 /* NotesTextPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EB0174DA0810051C1A1 /* NotesTextPage.m */; };
+		A7145EB7174DA2DE0051C1A1 /* NotesWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EB6174DA2DE0051C1A1 /* NotesWriter.m */; };
+		A7145EB9174DAC500051C1A1 /* NotesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EB8174DAC500051C1A1 /* NotesView.xib */; };
+		A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EBA174DAC960051C1A1 /* NotesWindow.xib */; };
+		A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */; };
+		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,24 @@
 		A7145E901744650E0051C1A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7145E921744650E0051C1A1 /* FlyNotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyNotesTests.h; sourceTree = "<group>"; };
 		A7145E931744650E0051C1A1 /* FlyNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyNotesTests.m; sourceTree = "<group>"; };
+		A7145E9D174CEE520051C1A1 /* NotesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesParser.h; sourceTree = "<group>"; };
+		A7145E9E174CEE520051C1A1 /* NotesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesParser.m; sourceTree = "<group>"; };
+		A7145EA6174D9E3D0051C1A1 /* NoteEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteEvent.h; sourceTree = "<group>"; };
+		A7145EA7174D9F7E0051C1A1 /* TextNoteEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNoteEvent.h; sourceTree = "<group>"; };
+		A7145EA8174D9F7E0051C1A1 /* TextNoteEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNoteEvent.m; sourceTree = "<group>"; };
+		A7145EAA174DA02D0051C1A1 /* ScribbleNoteEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleNoteEvent.h; sourceTree = "<group>"; };
+		A7145EAB174DA02D0051C1A1 /* ScribbleNoteEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleNoteEvent.m; sourceTree = "<group>"; };
+		A7145EAD174DA05A0051C1A1 /* NotesPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesPage.h; sourceTree = "<group>"; };
+		A7145EAE174DA06B0051C1A1 /* NotesScribblePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesScribblePage.m; sourceTree = "<group>"; };
+		A7145EB0174DA0810051C1A1 /* NotesTextPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTextPage.m; sourceTree = "<group>"; };
+		A7145EB5174DA2DE0051C1A1 /* NotesWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesWriter.h; sourceTree = "<group>"; };
+		A7145EB6174DA2DE0051C1A1 /* NotesWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesWriter.m; sourceTree = "<group>"; };
+		A7145EB8174DAC500051C1A1 /* NotesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesView.xib; sourceTree = "<group>"; };
+		A7145EBA174DAC960051C1A1 /* NotesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesWindow.xib; sourceTree = "<group>"; };
+		A73A03DC174EEE1D00AD3CF3 /* SaveMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveMe.h; sourceTree = "<group>"; };
+		A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDropBox.h; sourceTree = "<group>"; };
+		A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDropBox.m; sourceTree = "<group>"; };
+		A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +101,7 @@
 				A7145E5D1744650D0051C1A1 /* UIKit.framework in Frameworks */,
 				A7145E5F1744650D0051C1A1 /* Foundation.framework in Frameworks */,
 				A7145E611744650D0051C1A1 /* CoreGraphics.framework in Frameworks */,
+				A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +140,7 @@
 		A7145E5B1744650D0051C1A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */,
 				A7145E5C1744650D0051C1A1 /* UIKit.framework */,
 				A7145E5E1744650D0051C1A1 /* Foundation.framework */,
 				A7145E601744650D0051C1A1 /* CoreGraphics.framework */,
@@ -122,6 +152,10 @@
 		A7145E621744650D0051C1A1 /* FlyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				A73A03DB174EEE0000AD3CF3 /* DropBox */,
+				A7145EB4174DA0D90051C1A1 /* Pages */,
+				A7145EB3174DA0CA0051C1A1 /* XML */,
+				A7145EB2174DA08C0051C1A1 /* Events */,
 				A7145E6B1744650D0051C1A1 /* FlyNotesAppDelegate.h */,
 				A7145E6C1744650D0051C1A1 /* FlyNotesAppDelegate.m */,
 				A7145E741744650D0051C1A1 /* MainStoryboard_iPhone.storyboard */,
@@ -131,6 +165,8 @@
 				A7145E7D1744650E0051C1A1 /* FlyNotesDetailViewController.h */,
 				A7145E7E1744650E0051C1A1 /* FlyNotesDetailViewController.m */,
 				A7145E631744650D0051C1A1 /* Supporting Files */,
+				A7145EB8174DAC500051C1A1 /* NotesView.xib */,
+				A7145EBA174DAC960051C1A1 /* NotesWindow.xib */,
 			);
 			path = FlyNotes;
 			sourceTree = "<group>";
@@ -166,6 +202,49 @@
 				A7145E8F1744650E0051C1A1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7145EB2174DA08C0051C1A1 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				A7145EA6174D9E3D0051C1A1 /* NoteEvent.h */,
+				A7145EA7174D9F7E0051C1A1 /* TextNoteEvent.h */,
+				A7145EA8174D9F7E0051C1A1 /* TextNoteEvent.m */,
+				A7145EAA174DA02D0051C1A1 /* ScribbleNoteEvent.h */,
+				A7145EAB174DA02D0051C1A1 /* ScribbleNoteEvent.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		A7145EB3174DA0CA0051C1A1 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				A7145E9D174CEE520051C1A1 /* NotesParser.h */,
+				A7145E9E174CEE520051C1A1 /* NotesParser.m */,
+				A7145EB5174DA2DE0051C1A1 /* NotesWriter.h */,
+				A7145EB6174DA2DE0051C1A1 /* NotesWriter.m */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
+		A7145EB4174DA0D90051C1A1 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				A7145EAD174DA05A0051C1A1 /* NotesPage.h */,
+				A7145EAE174DA06B0051C1A1 /* NotesScribblePage.m */,
+				A7145EB0174DA0810051C1A1 /* NotesTextPage.m */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		A73A03DB174EEE0000AD3CF3 /* DropBox */ = {
+			isa = PBXGroup;
+			children = (
+				A73A03DC174EEE1D00AD3CF3 /* SaveMe.h */,
+				A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */,
+				A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */,
+			);
+			name = DropBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +325,8 @@
 				A7145E731744650D0051C1A1 /* Default-568h@2x.png in Resources */,
 				A7145E761744650E0051C1A1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				A7145E791744650E0051C1A1 /* MainStoryboard_iPad.storyboard in Resources */,
+				A7145EB9174DAC500051C1A1 /* NotesView.xib in Resources */,
+				A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +365,13 @@
 				A7145E6D1744650D0051C1A1 /* FlyNotesAppDelegate.m in Sources */,
 				A7145E7C1744650E0051C1A1 /* FlyNotesMasterViewController.m in Sources */,
 				A7145E7F1744650E0051C1A1 /* FlyNotesDetailViewController.m in Sources */,
+				A7145E9F174CEE520051C1A1 /* NotesParser.m in Sources */,
+				A7145EA9174D9F7E0051C1A1 /* TextNoteEvent.m in Sources */,
+				A7145EAC174DA02D0051C1A1 /* ScribbleNoteEvent.m in Sources */,
+				A7145EAF174DA06B0051C1A1 /* NotesScribblePage.m in Sources */,
+				A7145EB1174DA0810051C1A1 /* NotesTextPage.m in Sources */,
+				A7145EB7174DA2DE0051C1A1 /* NotesWriter.m in Sources */,
+				A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +490,10 @@
 		A7145E981744650E0051C1A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/dropbox-ios-sdk-1.3.4\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlyNotes/FlyNotes-Prefix.pch";
 				INFOPLIST_FILE = "FlyNotes/FlyNotes-Info.plist";
@@ -413,6 +505,10 @@
 		A7145E991744650E0051C1A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/dropbox-ios-sdk-1.3.4\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlyNotes/FlyNotes-Prefix.pch";
 				INFOPLIST_FILE = "FlyNotes/FlyNotes-Info.plist";
@@ -474,6 +570,7 @@
 				A7145E991744650E0051C1A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7145E9A1744650E0051C1A1 /* Build configuration list for PBXNativeTarget "FlyNotesTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +579,7 @@
 				A7145E9C1744650E0051C1A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
