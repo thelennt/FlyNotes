@@ -10,4 +10,9 @@
 
 @protocol NotesPage <NSObject>
 
+@property NSSTRING* type;
+
+-(NSXMLElement*)outputNotesPageNode()
+-(NSSTRING)getPageType;
+
 @end

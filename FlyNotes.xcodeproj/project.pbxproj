@@ -35,6 +35,8 @@
 		A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EBA174DAC960051C1A1 /* NotesWindow.xib */; };
 		A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */; };
 		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
+		A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC386175D792C00191A86 /* ScribbleStyle.m */; };
+		A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC389175D793A00191A86 /* NoteStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,11 @@
 		A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDropBox.h; sourceTree = "<group>"; };
 		A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDropBox.m; sourceTree = "<group>"; };
 		A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
+		A7ACC384175D790B00191A86 /* Style.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Style.h; sourceTree = "<group>"; };
+		A7ACC385175D792C00191A86 /* ScribbleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleStyle.h; sourceTree = "<group>"; };
+		A7ACC386175D792C00191A86 /* ScribbleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleStyle.m; sourceTree = "<group>"; };
+		A7ACC388175D793A00191A86 /* NoteStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteStyle.h; sourceTree = "<group>"; };
+		A7ACC389175D793A00191A86 /* NoteStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +159,8 @@
 		A7145E621744650D0051C1A1 /* FlyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACC38B175D834300191A86 /* VisualWidgets */,
+				A7ACC380175D789D00191A86 /* Styles */,
 				A73A03DB174EEE0000AD3CF3 /* DropBox */,
 				A7145EB4174DA0D90051C1A1 /* Pages */,
 				A7145EB3174DA0CA0051C1A1 /* XML */,
@@ -245,6 +254,25 @@
 				A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */,
 			);
 			name = DropBox;
+			sourceTree = "<group>";
+		};
+		A7ACC380175D789D00191A86 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				A7ACC384175D790B00191A86 /* Style.h */,
+				A7ACC385175D792C00191A86 /* ScribbleStyle.h */,
+				A7ACC386175D792C00191A86 /* ScribbleStyle.m */,
+				A7ACC388175D793A00191A86 /* NoteStyle.h */,
+				A7ACC389175D793A00191A86 /* NoteStyle.m */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
+		A7ACC38B175D834300191A86 /* VisualWidgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VisualWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +400,8 @@
 				A7145EB1174DA0810051C1A1 /* NotesTextPage.m in Sources */,
 				A7145EB7174DA2DE0051C1A1 /* NotesWriter.m in Sources */,
 				A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */,
+				A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */,
+				A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

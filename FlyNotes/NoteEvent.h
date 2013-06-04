@@ -10,4 +10,8 @@
 
 @protocol NoteEvent <NSObject>
 
+@property NSString* type;
+-(NSXMLElement)createNoteEventNode;
+-(NSString)getNoteEventType;
+
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ScribbleStyle.h"
+#import <UIKit/UIKit.h>
 
 @interface ScribbleNoteEvent : NSObject
+
+@property NSString* charText;
+@property NSPointArray* locations;
+@property NSNumber* timeStamp;
+@property ScribbleStyle* style;
 
 @end
