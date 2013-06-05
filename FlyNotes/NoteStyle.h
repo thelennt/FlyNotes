@@ -11,9 +11,11 @@
 
 @interface NoteStyle : NSObject <Style>
 
-@property NSNumber* bold;
-@property NSNumber* italic;
-@property NSNumber* underline;
-@property NSString* font;
+- (id)init:(NSNumber*)aid bold:(NSNumber*)abold italic:(NSNumber*)aitalic underline:(NSNumber*)aunderline font:(NSNumber*)afont;
+
+@property (readonly) NSNumber* bold;
+@property (readonly) NSNumber* italic;
+@property (readonly) NSNumber* underline;
+@property (readonly) NSNumber* font;
 
 @end

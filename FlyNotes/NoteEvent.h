@@ -10,8 +10,11 @@
 
 @protocol NoteEvent <NSObject>
 
-@property NSString* type;
--(NSXMLElement)createNoteEventNode;
--(NSString)getNoteEventType;
+@property (readonly) NSNumber* id;
+@property (readonly) NSString* type;
+@property (readonly) NSNumber* timeStamp;
+
+-(NSXMLElement*)createNoteEventNode;
+-(NSString*)noteEventType;
 
 @end

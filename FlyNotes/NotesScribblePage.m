@@ -10,4 +10,7 @@
 
 @implementation NotesScribblePage
 
+@property (NSPoint*) dimensions;
+
+
 @end

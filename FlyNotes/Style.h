@@ -10,8 +10,11 @@
 
 @protocol Style <NSObject>
 
+@property (readonly) NSString* type;
+@property (readonly) NSNumber* id;
+
+- (id)init:(NSString*)aType aid:(NSNumber*)aid;
 -(NSXMLElement*)createStyleNode;
--(NSString*)getType;
 
 
 @end

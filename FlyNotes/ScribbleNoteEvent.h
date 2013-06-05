@@ -11,10 +11,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ScribbleNoteEvent : NSObject
+-(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
+-(void)addPoint:(NSPoint)apoint;
 
-@property NSString* charText;
-@property NSPointArray* locations;
-@property NSNumber* timeStamp;
-@property ScribbleStyle* style;
+@property (readonly) NSPointArray* locations;
+@property (readonly) ScribbleStyle* style;
 
 @end

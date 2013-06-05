@@ -11,7 +11,9 @@
 
 @interface ScribbleStyle : NSObject  <Style>
 
-@property NSString* color;
-@property NSString* depth;
+- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;
+
+@property (readonly) NSString* color;
+@property (readonly) NSNumber* depth;
 
 @end
