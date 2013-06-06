@@ -2,13 +2,13 @@
 //  NotesScribblePage.h
 //  FlyNotes
 //
-//  Created by Nathan Thelen on 5/22/13.
+//  Created by Nathan Thelen on 6/5/13.
 //  Copyright (c) 2013 Nathan Thelen. All rights reserved.
 //
+#import <Foundation/Foundation.h>
+#import "NotesPage.h"
 
-#import <NotesPage.h>
-
-@interface NotesScribblePage : NotesPage
+@interface NotesScribblePage : NSObject <NotesPage>
 
 
 @end

@@ -37,6 +37,10 @@
 		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
 		A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC386175D792C00191A86 /* ScribbleStyle.m */; };
 		A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC389175D793A00191A86 /* NoteStyle.m */; };
+		A7ACC38F17600B8F00191A86 /* NoteScribbleCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC38E17600B8F00191A86 /* NoteScribbleCanvas.m */; };
+		A7ACC39217600BBF00191A86 /* NoteWritingCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */; };
+		A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39617600C1A00191A86 /* AudioRecording.m */; };
+		A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39917600C2C00191A86 /* VideoRecording.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,18 @@
 		A7ACC386175D792C00191A86 /* ScribbleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleStyle.m; sourceTree = "<group>"; };
 		A7ACC388175D793A00191A86 /* NoteStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteStyle.h; sourceTree = "<group>"; };
 		A7ACC389175D793A00191A86 /* NoteStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteStyle.m; sourceTree = "<group>"; };
+		A7ACC38C17600B6C00191A86 /* NoteCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteCanvas.h; sourceTree = "<group>"; };
+		A7ACC38D17600B8F00191A86 /* NoteScribbleCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteScribbleCanvas.h; sourceTree = "<group>"; };
+		A7ACC38E17600B8F00191A86 /* NoteScribbleCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteScribbleCanvas.m; sourceTree = "<group>"; };
+		A7ACC39017600BBF00191A86 /* NoteWritingCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteWritingCanvas.h; sourceTree = "<group>"; };
+		A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteWritingCanvas.m; sourceTree = "<group>"; };
+		A7ACC39417600C0600191A86 /* Recording.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recording.h; sourceTree = "<group>"; };
+		A7ACC39517600C1A00191A86 /* AudioRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecording.h; sourceTree = "<group>"; };
+		A7ACC39617600C1A00191A86 /* AudioRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecording.m; sourceTree = "<group>"; };
+		A7ACC39817600C2C00191A86 /* VideoRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecording.h; sourceTree = "<group>"; };
+		A7ACC39917600C2C00191A86 /* VideoRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecording.m; sourceTree = "<group>"; };
+		A7ACC39B17601A7B00191A86 /* NotesScribblePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesScribblePage.h; sourceTree = "<group>"; };
+		A7ACC39C17601AE500191A86 /* NotesTextPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesTextPage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,7 @@
 		A7145E621744650D0051C1A1 /* FlyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACC39317600BE300191A86 /* RecordingWidgets */,
 				A7ACC38B175D834300191A86 /* VisualWidgets */,
 				A7ACC380175D789D00191A86 /* Styles */,
 				A73A03DB174EEE0000AD3CF3 /* DropBox */,
@@ -242,6 +259,8 @@
 				A7145EAD174DA05A0051C1A1 /* NotesPage.h */,
 				A7145EAE174DA06B0051C1A1 /* NotesScribblePage.m */,
 				A7145EB0174DA0810051C1A1 /* NotesTextPage.m */,
+				A7ACC39B17601A7B00191A86 /* NotesScribblePage.h */,
+				A7ACC39C17601AE500191A86 /* NotesTextPage.h */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -271,8 +290,25 @@
 		A7ACC38B175D834300191A86 /* VisualWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACC38C17600B6C00191A86 /* NoteCanvas.h */,
+				A7ACC38D17600B8F00191A86 /* NoteScribbleCanvas.h */,
+				A7ACC38E17600B8F00191A86 /* NoteScribbleCanvas.m */,
+				A7ACC39017600BBF00191A86 /* NoteWritingCanvas.h */,
+				A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */,
 			);
 			name = VisualWidgets;
+			sourceTree = "<group>";
+		};
+		A7ACC39317600BE300191A86 /* RecordingWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				A7ACC39417600C0600191A86 /* Recording.h */,
+				A7ACC39517600C1A00191A86 /* AudioRecording.h */,
+				A7ACC39617600C1A00191A86 /* AudioRecording.m */,
+				A7ACC39817600C2C00191A86 /* VideoRecording.h */,
+				A7ACC39917600C2C00191A86 /* VideoRecording.m */,
+			);
+			name = RecordingWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +438,10 @@
 				A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */,
 				A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */,
 				A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */,
+				A7ACC38F17600B8F00191A86 /* NoteScribbleCanvas.m in Sources */,
+				A7ACC39217600BBF00191A86 /* NoteWritingCanvas.m in Sources */,
+				A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */,
+				A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

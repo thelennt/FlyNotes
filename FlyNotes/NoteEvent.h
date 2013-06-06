@@ -10,7 +10,8 @@
 
 @protocol NoteEvent <NSObject>
 
-@property (readonly) NSNumber* id;
+@protected
+@property (readonly) NSNumber* objectid;
 @property (readonly) NSString* type;
 @property (readonly) NSNumber* timeStamp;
 

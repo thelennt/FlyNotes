@@ -8,6 +8,25 @@
 
 #import "ScribbleNoteEvent.h"
 
+@interface ScribbleNoteEvent()
+@property (readwrite) NSNumber* objectid;
+@property (readwrite) NSString* type;
+@property (readwrite) NSNumber* timeStamp;
+@property (readwrite) ScribbleStyle* style;
+@end
+
 @implementation ScribbleNoteEvent
+@synthesize objectid;
+@synthesize type;
+@synthesize timeStamp;
+@synthesize style;
+
+-(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle
+{
+    self.objectid = aid;
+    self.timeStamp = atimeStamp;
+    self.style = astyle;
+    self.type = @"Scribble";
+}
 
 @end
