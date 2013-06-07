@@ -41,6 +41,7 @@
 		A7ACC39217600BBF00191A86 /* NoteWritingCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */; };
 		A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39617600C1A00191A86 /* AudioRecording.m */; };
 		A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39917600C2C00191A86 /* VideoRecording.m */; };
+		A7ACC39E1761659A00191A86 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39D1761659A00191A86 /* XMLWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		A7ACC39917600C2C00191A86 /* VideoRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecording.m; sourceTree = "<group>"; };
 		A7ACC39B17601A7B00191A86 /* NotesScribblePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesScribblePage.h; sourceTree = "<group>"; };
 		A7ACC39C17601AE500191A86 /* NotesTextPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesTextPage.h; sourceTree = "<group>"; };
+		A7ACC39D1761659A00191A86 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLWriter.m; path = "../../../Downloads/XMLWriter-1/XMLWriter.m"; sourceTree = "<group>"; };
+		A7ACC39F176165AF00191A86 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLWriter.h; path = "../../../Downloads/XMLWriter-1/XMLWriter.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,8 @@
 		A7145EB3174DA0CA0051C1A1 /* XML */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACC39F176165AF00191A86 /* XMLWriter.h */,
+				A7ACC39D1761659A00191A86 /* XMLWriter.m */,
 				A7145E9D174CEE520051C1A1 /* NotesParser.h */,
 				A7145E9E174CEE520051C1A1 /* NotesParser.m */,
 				A7145EB5174DA2DE0051C1A1 /* NotesWriter.h */,
@@ -442,6 +447,7 @@
 				A7ACC39217600BBF00191A86 /* NoteWritingCanvas.m in Sources */,
 				A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */,
 				A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */,
+				A7ACC39E1761659A00191A86 /* XMLWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

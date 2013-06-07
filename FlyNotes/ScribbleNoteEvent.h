@@ -14,7 +14,7 @@
 -(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
 -(void)addPoint:(NSPoint)apoint;
 
-@property (readonly) NSPointArray* locations;
+@property (readonly) NSMutableArray* locations;
 @property (readonly) ScribbleStyle* style;
 
 @end

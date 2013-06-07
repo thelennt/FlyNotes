@@ -23,10 +23,13 @@
 
 -(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle
 {
-    self.objectid = aid;
-    self.timeStamp = atimeStamp;
-    self.style = astyle;
-    self.type = @"Scribble";
+    objectid = aid;
+    timeStamp = atimeStamp;
+    style = astyle;
+    type = @"ScribbleNotee";
+    
+    return self;
 }
 
+-(
 @end
