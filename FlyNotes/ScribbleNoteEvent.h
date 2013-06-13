@@ -12,7 +12,7 @@
 
 @interface ScribbleNoteEvent : NSObject
 -(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
--(void)addPoint:(NSPoint)apoint;
+-(void)addPoint:(CGPoint)apoint;
 
 @property (readonly) NSMutableArray* locations;
 @property (readonly) ScribbleStyle* style;

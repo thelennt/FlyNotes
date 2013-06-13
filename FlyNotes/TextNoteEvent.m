@@ -7,6 +7,7 @@
 //
 
 #import "TextNoteEvent.h"
+#import "XMLWriter.h"
 
 @implementation TextNoteEvent
 @synthesize objectid;
@@ -29,13 +30,23 @@
 
 -(NSString*) noteEventNode
 {
-    return @"Himom";
-
-
+    XMLWriter *writer = [[XMLWriter alloc] init];
+    
+    [writer writeStartElement:@"TextNoteEvent"];
+    [writer writeAttribute:@"location" value:[location stringValue]];
+    [writer writeAttribute:@"style" value:[[style identifier] stringValue]];
+    [writer writeAttribute:@"objectid" value:[objectid stringValue]];
+    [writer writeAttribute:@"type" value:type];
+    [writer writeAttribute:@"timeStamp" value:[timeStamp stringValue]];
+    [writer writeAttribute:@"text" value:charText];
+    
+    [writer writeEndElement];
+    return [writer toString];
 }
 
--(void)addText:(NSString*)charText
+-(void)addText:(NSString*)acharText
 {
+    [charText appendString:acharText];
     return;
 }
 @end
