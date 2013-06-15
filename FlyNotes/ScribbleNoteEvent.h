@@ -9,12 +9,28 @@
 #import <Foundation/Foundation.h>
 #import "ScribbleStyle.h"
 #import <UIKit/UIKit.h>
+#import "NoteEvent.h"
+#import "NoteStyle.h"
 
-@interface ScribbleNoteEvent : NSObject
+@interface ScribbleNoteEvent : NSObject <NoteEvent>
+{
+@protected
+    NSNumber* objectid;
+    NSString* type;
+    NSNumber* timeStamp;
+    NSArray* locations;
+    NSNumber* location;
+    NoteStyle* style;
+}
+
 -(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
 -(void)addPoint:(CGPoint)apoint;
 
-@property (readonly) NSMutableArray* locations;
+@property (readonly) NSPointerArray* locations;
 @property (readonly) ScribbleStyle* style;
+@property (readonly) NSNumber* objectid;
+@property (readonly) NSString* type;
+@property (readonly) NSNumber* timeStamp;
+@property (readonly) NSString* noteEventNode;
 
 @end

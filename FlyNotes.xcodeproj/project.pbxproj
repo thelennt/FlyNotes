@@ -43,6 +43,14 @@
 		A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39917600C2C00191A86 /* VideoRecording.m */; };
 		A7ACC4161769634400191A86 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC4151769634400191A86 /* XMLWriter.m */; };
 		A7ACC4171769634400191A86 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC4151769634400191A86 /* XMLWriter.m */; };
+		A7ACC41B176C0AED00191A86 /* RecordModeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC41A176C0AED00191A86 /* RecordModeEventHandler.m */; };
+		A7ACC41C176C0AED00191A86 /* RecordModeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC41A176C0AED00191A86 /* RecordModeEventHandler.m */; };
+		A7ACC41F176C0B0400191A86 /* StudyModeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */; };
+		A7ACC420176C0B0400191A86 /* StudyModeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */; };
+		A7ACC424176C0BCF00191A86 /* NotesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC423176C0BCF00191A86 /* NotesStore.m */; };
+		A7ACC425176C0BCF00191A86 /* NotesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC423176C0BCF00191A86 /* NotesStore.m */; };
+		A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
+		A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +126,14 @@
 		A7ACC39C17601AE500191A86 /* NotesTextPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesTextPage.h; sourceTree = "<group>"; };
 		A7ACC4141769634400191A86 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
 		A7ACC4151769634400191A86 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
+		A7ACC419176C0AED00191A86 /* RecordModeEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordModeEventHandler.h; sourceTree = "<group>"; };
+		A7ACC41A176C0AED00191A86 /* RecordModeEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordModeEventHandler.m; sourceTree = "<group>"; };
+		A7ACC41D176C0B0400191A86 /* StudyModeEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyModeEventHandler.h; sourceTree = "<group>"; };
+		A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyModeEventHandler.m; sourceTree = "<group>"; };
+		A7ACC422176C0BCF00191A86 /* NotesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesStore.h; sourceTree = "<group>"; };
+		A7ACC423176C0BCF00191A86 /* NotesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesStore.m; sourceTree = "<group>"; };
+		A7ACC426176C0BE200191A86 /* CanvasStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasStore.h; sourceTree = "<group>"; };
+		A7ACC427176C0BE200191A86 /* CanvasStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +195,8 @@
 		A7145E621744650D0051C1A1 /* FlyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACC421176C0BB100191A86 /* DataStore */,
+				A7ACC418176C0AAE00191A86 /* EventHandlers */,
 				A7ACC39317600BE300191A86 /* RecordingWidgets */,
 				A7ACC38B175D834300191A86 /* VisualWidgets */,
 				A7ACC380175D789D00191A86 /* Styles */,
@@ -317,6 +335,28 @@
 			name = RecordingWidgets;
 			sourceTree = "<group>";
 		};
+		A7ACC418176C0AAE00191A86 /* EventHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				A7ACC419176C0AED00191A86 /* RecordModeEventHandler.h */,
+				A7ACC41A176C0AED00191A86 /* RecordModeEventHandler.m */,
+				A7ACC41D176C0B0400191A86 /* StudyModeEventHandler.h */,
+				A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */,
+			);
+			name = EventHandlers;
+			sourceTree = "<group>";
+		};
+		A7ACC421176C0BB100191A86 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				A7ACC422176C0BCF00191A86 /* NotesStore.h */,
+				A7ACC423176C0BCF00191A86 /* NotesStore.m */,
+				A7ACC426176C0BE200191A86 /* CanvasStore.h */,
+				A7ACC427176C0BE200191A86 /* CanvasStore.m */,
+			);
+			name = DataStore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -449,6 +489,10 @@
 				A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */,
 				A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */,
 				A7ACC4161769634400191A86 /* XMLWriter.m in Sources */,
+				A7ACC41B176C0AED00191A86 /* RecordModeEventHandler.m in Sources */,
+				A7ACC41F176C0B0400191A86 /* StudyModeEventHandler.m in Sources */,
+				A7ACC424176C0BCF00191A86 /* NotesStore.m in Sources */,
+				A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +502,10 @@
 			files = (
 				A7145E941744650E0051C1A1 /* FlyNotesTests.m in Sources */,
 				A7ACC4171769634400191A86 /* XMLWriter.m in Sources */,
+				A7ACC41C176C0AED00191A86 /* RecordModeEventHandler.m in Sources */,
+				A7ACC420176C0B0400191A86 /* StudyModeEventHandler.m in Sources */,
+				A7ACC425176C0BCF00191A86 /* NotesStore.m in Sources */,
+				A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
