@@ -9,6 +9,13 @@
 #import "NotesPage.h"
 
 @interface NotesScribblePage : NSObject <NotesPage>
-
+{
+    @protected
+    NSString* type;
+    NSNumber* number;
+    NSString* background;
+    NSMutableArray* events;
+    CGPoint* dimensions;
+}
 
 @end

@@ -7,15 +7,7 @@
 //
 
 #import "ScribbleNoteEvent.h"
-
-@interface ScribbleNoteEvent()
-@property (readwrite) NSNumber* objectid;
-@property (readwrite) NSString* type;
-@property (readwrite) NSNumber* timeStamp;
-@property (readwrite) ScribbleStyle* style;
-@property XMLWriter* writer;
--(NSString*)locationNode;
-@end
+#import "XMLWriter.h"
 
 @implementation ScribbleNoteEvent
 @synthesize objectid;
@@ -24,6 +16,7 @@
 @synthesize style;
 @synthesize locations;
 
+XMLWriter* writer;
 -(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle
 {
     objectid = aid;
@@ -44,7 +37,7 @@
     [writer writeAttribute:@"type" value:type];
     [writer writeAttribute:@"timeStamp" value:[timeStamp stringValue]];
     [writer writeAttribute:@"location" value:[location stringValue]];
-    [locationNode];
+    [writer write:[self locationNode]];
     [writer writeEndElement];
     
     return [writer toString];
@@ -61,12 +54,6 @@
         [writer writeEndElement];
     }
     return [writer toString];
-}
-
--(void)addText:(NSString*)acharText
-{
-    [charText appendString:acharText];
-    return;
 }
 
 -(

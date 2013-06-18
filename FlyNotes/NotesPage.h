@@ -7,17 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NoteEvent.h"
+#import "ScribbleNoteEvent.h"
+#import "TextNoteEvent.h"
 
 @protocol NotesPage <NSObject>
 
 @property (readonly) NSString* type;
 @property (readonly) NSNumber* number;
-@property (readonly) NSFile* background;
-@property (readonly) NSArray* events;
-@property (readonly) NSXMLElement* NotesPageNode;
+@property (readonly) NSString* background;
+@property (readonly) NSMutableArray* events;
+@property (readonly) NSString* NotesPageNode;
+@property (readonly) CGPoint* dimensions;
 
--(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSFile*)abackground;
--(BOOL)changeBackground:(NSFile*)abackground;
--(BOOL)addEvent:(NoteEvent*)aevent;
+-(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground Dimensions:(CGPoint*)adimensions;
+-(BOOL)changeBackground:(NSString*)abackground;
+
+@optional
+-(BOOL)addScribbleEvent:(ScribbleNoteEvent*)aevent;
+-(BOOL)addTextEvent:(TextNoteEvent*)aevent;
 
 @end

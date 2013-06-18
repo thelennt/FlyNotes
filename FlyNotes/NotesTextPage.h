@@ -8,7 +8,26 @@
 #import <Foundation/Foundation.h>
 #import "NotesPage.h"
 
-@interface NotesTextPage : NSObject <NotesTextPage>
+@interface NotesTextPage : NSObject <NotesPage>
+{
+@protected
+    
+    NSString* type;
+    NSNumber* number;
+    NSString* background;
+    NSMutableArray* events;
+    CGPoint* dimensions;
+}
+//-(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
+/*
+-(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground;
+-(BOOL)changeBackground:(NSString*)abackground;
+-(BOOL)addEvent:(NoteEvent*)aevent;
 
-
+@property (readonly) NSString* type;
+@property (readonly) NSNumber* number;
+@property (readonly) NSString* background;
+@property (readonly) NSArray* events;
+@property (readonly) NSString* NotesPageNode;
+*/
 @end
