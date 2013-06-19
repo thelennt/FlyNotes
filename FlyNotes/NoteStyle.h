@@ -16,6 +16,6 @@
 @property (readonly) NSNumber* bold;
 @property (readonly) NSNumber* italic;
 @property (readonly) NSNumber* underline;
-@property (readonly) NSNumber* font;
+@property (readonly) NSString* font;
 
 @end

@@ -12,9 +12,7 @@
 
 @property (readonly) NSString* type;
 @property (readonly) NSNumber* identifier;
-
-- (id)init:(NSString*)aType aid:(NSNumber*)aid;
--(NSXMLElement*)createStyleNode;
+@property (readonly) NSString* styleNode;
 
 
 @end

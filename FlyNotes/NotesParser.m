@@ -7,38 +7,16 @@
 //
 
 #import "NotesParser.h"
+#import "Stack.h"
 
 @implementation NotesParser
-/*
-- (void)openXMLFile:(NSString *)filename
-{
-    NSString *startingDir = [[NSUserDefaults standardUserDefaults] objectForKey:@"StartingDirectory"];
-    if (!startingDir)
-        startingDir = NSHomeDirectory();
-    [oPanel setAllowsMultipleSelection:NO];
-    [oPanel beginSheetForDirectory:startingDir file:nil types:fileTypes
-                    modalForWindow:[self window] modalDelegate:self
-                    didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:)
-                       contextInfo:nil];
-}
- 
 
-- (void)openPanelDidEnd:(NSOpenPanel *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-    NSString *pathToFile = nil;
-    if (returnCode == NSOKButton) {
-        pathToFile = [[[sheet filenames] objectAtIndex:0] copy];
-    }
-    if (pathToFile) {
-        NSString *startingDir = [pathToFile stringByDeletingLastPathComponent];
-        [[NSUserDefaults standardUserDefaults] setObject:startingDir forKey:@"StartingDirectory"];
-        [self parseXMLFile:pathToFile];
-    }
-}
-*/
+Stack *elementStack;
 
 - (void)parseXMLFile:(NSString *)pathToFile
 {
+    elementStack = [[Stack alloc]init];
+    
     BOOL success;
     NSURL *xmlURL = [NSURL fileURLWithPath:pathToFile];
     if (_parser) // addressParser is an NSXMLParser instance variable
@@ -52,23 +30,41 @@
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
-    
-    
-    if ( [elementName isEqualToString:@"addresses"]) {
-        // addresses is an NSMutableArray instance variable
-        if (!addresses)
-            addresses = [[NSMutableArray alloc] init];
+
+        [elementStack push:elementName];
+    if ( [elementName isEqualToString:@"ScribbleNoteEvent"])
+    {
+
         return;
     }
     
-    if ( [elementName isEqualToString:@"person"] ) {
-        // currentPerson is an ABPerson instance variable
-        currentPerson = [[ABPerson alloc] init];
+    if ( [elementName isEqualToString:@"TextNoteEvent"] )
+    {
+
         return;
     }
     
-    if ( [elementName isEqualToString:@"lastName"] ) {
-        [self setCurrentProperty:kABLastNameProperty];
+    if ( [elementName isEqualToString:@"NotesTextPage"] )
+    {
+
+        return;
+    }
+    
+    if ( [elementName isEqualToString:@"NotesScribblePage"] )
+    {
+        
+        return;
+    }
+    
+    if ( [elementName isEqualToString:@"ScribbleStyle"] )
+    {
+        
+        return;
+    }
+    
+    if ( [elementName isEqualToString:@"NoteStyle"] )
+    {
+        
         return;
     }
     
@@ -87,6 +83,7 @@
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
+    [elementStack pop];
     // ignore root and empty elements
     if (( [elementName isEqualToString:@"addresses"]) ||
         ( [elementName isEqualToString:@"address"] )) return;

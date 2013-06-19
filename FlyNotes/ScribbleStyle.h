@@ -10,6 +10,13 @@
 #import "Style.h"
 
 @interface ScribbleStyle : NSObject  <Style>
+{
+@protected
+    NSString* type;
+    NSNumber* identifier;
+    NSString* color;
+    NSNumber* depth;
+}
 
 - (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;
 

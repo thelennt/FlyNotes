@@ -31,10 +31,9 @@ XMLWriter* writer;
 {
     writer = [[XMLWriter alloc] init];
 
-    [writer writeStartElement:@"ScibbleNoteEvent"];
+    [writer writeStartElement:type];
     [writer writeAttribute:@"style" value:[[style identifier] stringValue]];
     [writer writeAttribute:@"objectid" value:[objectid stringValue]];
-    [writer writeAttribute:@"type" value:type];
     [writer writeAttribute:@"timeStamp" value:[timeStamp stringValue]];
     [writer writeAttribute:@"location" value:[location stringValue]];
     [writer write:[self locationNode]];
@@ -45,12 +44,13 @@ XMLWriter* writer;
 
 -(NSString*)locationNode
 {
-    CGPoint point;
-    for(point in locations)
+    CGPoint* point;
+    for(id loc in locations)
     {
+        point = (__bridge CGPoint*)loc;
         [writer writeStartElement:@"Point"];
-        [writer writeAttribute:@"x" value:[[point x]]];
-        [writer writeAttribute:@"y" value:[[point y]]];
+        [writer writeAttribute:@"x" value:[NSNumber numberWithFloat:[point->x]]];
+        [writer writeAttribute:@"y" value:[NSNumber numberWithFloat:[point->y]]];
         [writer writeEndElement];
     }
     return [writer toString];

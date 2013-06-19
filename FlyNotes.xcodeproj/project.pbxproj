@@ -51,6 +51,8 @@
 		A7ACC425176C0BCF00191A86 /* NotesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC423176C0BCF00191A86 /* NotesStore.m */; };
 		A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
 		A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
+		A7ACC42D1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
+		A7ACC42E1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,8 @@
 		A7ACC423176C0BCF00191A86 /* NotesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesStore.m; sourceTree = "<group>"; };
 		A7ACC426176C0BE200191A86 /* CanvasStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasStore.h; sourceTree = "<group>"; };
 		A7ACC427176C0BE200191A86 /* CanvasStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasStore.m; sourceTree = "<group>"; };
+		A7ACC42B1771405100191A86 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		A7ACC42C1771405100191A86 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		A7145E621744650D0051C1A1 /* FlyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACC42A1771402F00191A86 /* Utilities */,
 				A7ACC421176C0BB100191A86 /* DataStore */,
 				A7ACC418176C0AAE00191A86 /* EventHandlers */,
 				A7ACC39317600BE300191A86 /* RecordingWidgets */,
@@ -357,6 +362,15 @@
 			name = DataStore;
 			sourceTree = "<group>";
 		};
+		A7ACC42A1771402F00191A86 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A7ACC42B1771405100191A86 /* Stack.h */,
+				A7ACC42C1771405100191A86 /* Stack.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -493,6 +507,7 @@
 				A7ACC41F176C0B0400191A86 /* StudyModeEventHandler.m in Sources */,
 				A7ACC424176C0BCF00191A86 /* NotesStore.m in Sources */,
 				A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */,
+				A7ACC42D1771405100191A86 /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +521,7 @@
 				A7ACC420176C0B0400191A86 /* StudyModeEventHandler.m in Sources */,
 				A7ACC425176C0BCF00191A86 /* NotesStore.m in Sources */,
 				A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */,
+				A7ACC42E1771405100191A86 /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

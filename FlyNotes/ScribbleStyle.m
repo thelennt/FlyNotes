@@ -8,11 +8,35 @@
 
 #import "ScribbleStyle.h"
 #import "Style.h"
+#import "XMLWriter.h"
 
-@implementation ScribbleStyle : Style
+@implementation ScribbleStyle
+@synthesize type;
+@synthesize identifier;
+@synthesize color;
+@synthesize depth;
 
-@property NSNUMBER penDepth
-@property NSNUMBER penStyle;
+- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth
+{
+    type = @"ScribbleStyle";
+    color = acolor;
+    depth = adepth;
+    identifier = aid;
+    return self;
+}
+
+- (NSString*) styleNode
+{
+    XMLWriter *writer = [[XMLWriter alloc] init];
+    
+    [writer writeStartElement:type];
+    [writer writeAttribute:@"color" value:color];
+    [writer writeAttribute:@"depth" value:[depth stringValue]];
+    [writer writeAttribute:@"identifier" value:[identifier stringValue]];
+    [writer writeAttribute:@"type" value:type]; 
+    [writer writeEndElement];
+    return [writer toString];
+}
 
 
 @end

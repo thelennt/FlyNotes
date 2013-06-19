@@ -32,11 +32,10 @@
 {
     XMLWriter *writer = [[XMLWriter alloc] init];
     
-    [writer writeStartElement:@"TextNoteEvent"];
+    [writer writeStartElement:type];
     [writer writeAttribute:@"location" value:[location stringValue]];
     [writer writeAttribute:@"style" value:[[style identifier] stringValue]];
     [writer writeAttribute:@"objectid" value:[objectid stringValue]];
-    [writer writeAttribute:@"type" value:type];
     [writer writeAttribute:@"timeStamp" value:[timeStamp stringValue]];
     [writer writeAttribute:@"text" value:charText];
     
