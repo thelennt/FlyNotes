@@ -11,3 +11,5 @@
 @implementation NotesStore
 
 @end
+
+- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;

@@ -26,7 +26,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "45"
          endingLineNumber = "45"
-         landmarkName = "-parseXMLFile:"
+         landmarkName = "-parser:didStartElement:namespaceURI:qualifiedName:attributes:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -76,8 +76,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "14"
          endingLineNumber = "14"
-         landmarkName = "-init:color:depth:"
-         landmarkType = "4">
+         landmarkName = "@interface ScribbleStyle"
+         landmarkType = "2">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -113,8 +113,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "15"
          endingLineNumber = "15"
-         landmarkName = "-addPoint:"
-         landmarkType = "4">
+         landmarkName = "@interface ScribbleNoteEvent"
+         landmarkType = "2">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -125,9 +125,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "13"
-         endingLineNumber = "13"
-         landmarkName = "@interface ScribbleNoteEvent"
-         landmarkType = "2">
+         endingLineNumber = "13">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -152,7 +150,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "16"
          endingLineNumber = "16"
-         landmarkName = "events"
+         landmarkName = "type"
          landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint
@@ -315,8 +313,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "20"
          endingLineNumber = "20"
-         landmarkName = "-changeBackground:"
-         landmarkType = "4">
+         landmarkName = "NotesPageNode"
+         landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -328,8 +326,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "22"
          endingLineNumber = "22"
-         landmarkName = "-addScribbleEvent:"
-         landmarkType = "4">
+         landmarkName = "@protocol NotesPage"
+         landmarkType = "2">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -353,9 +351,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "12"
-         endingLineNumber = "12"
-         landmarkName = "@implementation NotesTextPage"
-         landmarkType = "3">
+         endingLineNumber = "12">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -367,7 +363,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "30"
          endingLineNumber = "30"
-         landmarkName = "-addEvent:"
+         landmarkName = "-changeBackground:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -484,8 +480,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "13"
          endingLineNumber = "13"
-         landmarkName = "type"
-         landmarkType = "19">
+         landmarkName = "@implementation ScribbleStyle"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -497,7 +493,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "14"
          endingLineNumber = "14"
-         landmarkName = "identifier"
+         landmarkName = "type"
          landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint

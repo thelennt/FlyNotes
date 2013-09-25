@@ -10,5 +10,12 @@
 #import "Recording.h"
 
 @interface AudioRecording : NSObject <Recording>
+{
+    AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+}
+- (IBAction)recordPauseTapped:(id)sender;
+- (IBAction)stopTapped:(id)sender;
+- (IBAction)playTapped:(id)sender;
 
 @end

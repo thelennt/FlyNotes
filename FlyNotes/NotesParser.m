@@ -8,10 +8,13 @@
 
 #import "NotesParser.h"
 #import "Stack.h"
+#import "ScribbleNoteEvent.h"
+#import "TextNoteEvent.h"
 
 @implementation NotesParser
 
 Stack *elementStack;
+@synthesize notes;
 
 - (void)parseXMLFile:(NSString *)pathToFile
 {
@@ -34,37 +37,38 @@ Stack *elementStack;
         [elementStack push:elementName];
     if ( [elementName isEqualToString:@"ScribbleNoteEvent"])
     {
-
+        ScribbleNoteEvent *event = [[ScribbleNoteEvent alloc] init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle ];
         return;
     }
     
     if ( [elementName isEqualToString:@"TextNoteEvent"] )
     {
-
+        TeztNoteEvent *event = [[TextNoteEvent alloc] init: init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(NoteStyle*)astyle Location:(NSNumber*)alocation
         return;
     }
     
     if ( [elementName isEqualToString:@"NotesTextPage"] )
     {
-
+-(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground
         return;
     }
     
     if ( [elementName isEqualToString:@"NotesScribblePage"] )
     {
-        
+        -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground
         return;
     }
     
     if ( [elementName isEqualToString:@"ScribbleStyle"] )
     {
-        
+        - (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth
         return;
     }
     
     if ( [elementName isEqualToString:@"NoteStyle"] )
     {
-        
+        - (id)init:(NSNumber*)aid bold:(NSNumber*)abold italic:(NSNumber*)aitalic underline:(NSNumber*)aunderline font:(NSString*)afont
+
         return;
     }
     

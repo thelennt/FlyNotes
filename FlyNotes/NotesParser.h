@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NotesStore.h"
 
 @interface NotesParser : NSObject
+{
+    @private
+    NotesStore *notes;
+}
+@property (readonly) NotesStore *notes;
 
-@property NSXMLParser *parser;
-
+- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;
+    
 @end

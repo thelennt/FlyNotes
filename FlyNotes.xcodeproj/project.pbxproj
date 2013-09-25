@@ -35,10 +35,12 @@
 		A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EBA174DAC960051C1A1 /* NotesWindow.xib */; };
 		A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */; };
 		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
+		A78E981417EBC38300E31363 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E981317EBC38300E31363 /* AVFoundation.framework */; };
+		A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981517F1063000E31363 /* ScribbleCanvas.xib */; };
+		A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981717F10C7000E31363 /* NoteCanvas.xib */; };
+		A78E981A17F1102300E31363 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981917F1102300E31363 /* MainScreen.xib */; };
 		A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC386175D792C00191A86 /* ScribbleStyle.m */; };
 		A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC389175D793A00191A86 /* NoteStyle.m */; };
-		A7ACC38F17600B8F00191A86 /* NoteScribbleCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC38E17600B8F00191A86 /* NoteScribbleCanvas.m */; };
-		A7ACC39217600BBF00191A86 /* NoteWritingCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */; };
 		A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39617600C1A00191A86 /* AudioRecording.m */; };
 		A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39917600C2C00191A86 /* VideoRecording.m */; };
 		A7ACC4161769634400191A86 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC4151769634400191A86 /* XMLWriter.m */; };
@@ -109,16 +111,15 @@
 		A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDropBox.h; sourceTree = "<group>"; };
 		A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDropBox.m; sourceTree = "<group>"; };
 		A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
+		A78E981317EBC38300E31363 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A78E981517F1063000E31363 /* ScribbleCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScribbleCanvas.xib; sourceTree = "<group>"; };
+		A78E981717F10C7000E31363 /* NoteCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCanvas.xib; sourceTree = "<group>"; };
+		A78E981917F1102300E31363 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
 		A7ACC384175D790B00191A86 /* Style.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Style.h; sourceTree = "<group>"; };
 		A7ACC385175D792C00191A86 /* ScribbleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleStyle.h; sourceTree = "<group>"; };
 		A7ACC386175D792C00191A86 /* ScribbleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleStyle.m; sourceTree = "<group>"; };
 		A7ACC388175D793A00191A86 /* NoteStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteStyle.h; sourceTree = "<group>"; };
 		A7ACC389175D793A00191A86 /* NoteStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteStyle.m; sourceTree = "<group>"; };
-		A7ACC38C17600B6C00191A86 /* NoteCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteCanvas.h; sourceTree = "<group>"; };
-		A7ACC38D17600B8F00191A86 /* NoteScribbleCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteScribbleCanvas.h; sourceTree = "<group>"; };
-		A7ACC38E17600B8F00191A86 /* NoteScribbleCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteScribbleCanvas.m; sourceTree = "<group>"; };
-		A7ACC39017600BBF00191A86 /* NoteWritingCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteWritingCanvas.h; sourceTree = "<group>"; };
-		A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteWritingCanvas.m; sourceTree = "<group>"; };
 		A7ACC39417600C0600191A86 /* Recording.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recording.h; sourceTree = "<group>"; };
 		A7ACC39517600C1A00191A86 /* AudioRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecording.h; sourceTree = "<group>"; };
 		A7ACC39617600C1A00191A86 /* AudioRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecording.m; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78E981417EBC38300E31363 /* AVFoundation.framework in Frameworks */,
 				A7145E5D1744650D0051C1A1 /* UIKit.framework in Frameworks */,
 				A7145E5F1744650D0051C1A1 /* Foundation.framework in Frameworks */,
 				A7145E611744650D0051C1A1 /* CoreGraphics.framework in Frameworks */,
@@ -168,6 +170,7 @@
 		A7145E501744650D0051C1A1 = {
 			isa = PBXGroup;
 			children = (
+				A78E981317EBC38300E31363 /* AVFoundation.framework */,
 				A7145E621744650D0051C1A1 /* FlyNotes */,
 				A7145E8C1744650E0051C1A1 /* FlyNotesTests */,
 				A7145E5B1744650D0051C1A1 /* Frameworks */,
@@ -319,11 +322,9 @@
 		A7ACC38B175D834300191A86 /* VisualWidgets */ = {
 			isa = PBXGroup;
 			children = (
-				A7ACC38C17600B6C00191A86 /* NoteCanvas.h */,
-				A7ACC38D17600B8F00191A86 /* NoteScribbleCanvas.h */,
-				A7ACC38E17600B8F00191A86 /* NoteScribbleCanvas.m */,
-				A7ACC39017600BBF00191A86 /* NoteWritingCanvas.h */,
-				A7ACC39117600BBF00191A86 /* NoteWritingCanvas.m */,
+				A78E981517F1063000E31363 /* ScribbleCanvas.xib */,
+				A78E981717F10C7000E31363 /* NoteCanvas.xib */,
+				A78E981917F1102300E31363 /* MainScreen.xib */,
 			);
 			name = VisualWidgets;
 			sourceTree = "<group>";
@@ -451,6 +452,9 @@
 				A7145E791744650E0051C1A1 /* MainStoryboard_iPad.storyboard in Resources */,
 				A7145EB9174DAC500051C1A1 /* NotesView.xib in Resources */,
 				A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */,
+				A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */,
+				A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */,
+				A78E981A17F1102300E31363 /* MainScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +502,6 @@
 				A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */,
 				A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */,
 				A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */,
-				A7ACC38F17600B8F00191A86 /* NoteScribbleCanvas.m in Sources */,
-				A7ACC39217600BBF00191A86 /* NoteWritingCanvas.m in Sources */,
 				A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */,
 				A7ACC39A17600C2C00191A86 /* VideoRecording.m in Sources */,
 				A7ACC4161769634400191A86 /* XMLWriter.m in Sources */,

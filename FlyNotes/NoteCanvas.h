@@ -10,4 +10,11 @@
 
 @protocol NoteCanvas <NSObject>
 
+- (void) executeEvent:(NSString *)localName value:(NSString *)value;
+- (void) executePage:(NSString *)localName value:(NSString *)value;
+
+- (void) pause(NSString *)localName value:(NSString *)value;
+- (void) stop(NSString *)localName value:(NSString *)value;
+
+- (void) setMode:(NSString *)mode;
 @end
