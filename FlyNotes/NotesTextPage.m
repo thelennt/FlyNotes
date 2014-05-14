@@ -22,7 +22,6 @@
     type = @"NotesTextPage";
     number = anumber;
     background = abackground;
-    C
 }
 -(BOOL)changeBackground:(NSString*)abackground
 {

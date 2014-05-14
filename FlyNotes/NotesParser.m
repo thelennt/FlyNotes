@@ -43,7 +43,7 @@ Stack *elementStack;
     
     if ( [elementName isEqualToString:@"TextNoteEvent"] )
     {
-        TeztNoteEvent *event = [[TextNoteEvent alloc] init: init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(NoteStyle*)astyle Location:(NSNumber*)alocation
+        TextNoteEvent *event = [[TextNoteEvent alloc] init: init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(NoteStyle*)astyle Location:(NSNumber*)alocation
         return;
     }
     

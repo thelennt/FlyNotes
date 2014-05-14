@@ -35,6 +35,7 @@
     [writer writeAttribute:@"identifier" value:[identifier stringValue]];
     [writer writeAttribute:@"type" value:type]; 
     [writer writeEndElement];
+
     return [writer toString];
 }
 

@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NotesPage.h"
 
 @interface NotesStore : NSObject
+{
+    NSMutableArray* notes;
+    
+}
+
+- (id) init;
+- (void) newNotesPage:(NotesPage*)page;
+- (NotesPage*) getNotesPage:(NSUInteger)page;
+- (void) removeNotesPage:(NSUInteger)page;
+- (NSUInteger) getPages;
+
 
 @end

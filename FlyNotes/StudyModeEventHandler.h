@@ -16,7 +16,7 @@
 }
 - (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(Recording*)recording;
 
-- (void) screenselected:(NSNUMBER*)x y:(NSNumber*) y;
+- (void) screenselected:(NSNumber*)x y:(NSNumber*) y;
 - (void) timeLapse:(NSNumber*)time;
 
 - (void) nextPage;
@@ -24,4 +24,7 @@
 
 - (void) playRecording;
 - (void) stopRecording;
+
+- (void) save;
+- (void) load;
 @end

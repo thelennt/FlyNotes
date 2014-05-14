@@ -10,6 +10,33 @@
 
 @implementation NotesStore
 
-@end
+- (id) init
+{
+    notes = [[NSMutableArray alloc] init];
+}
+- (void) newNotesPage:(NotesPage*)page
+{
+    [notes addObject:page];
 
-- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;
+}
+- (NotesPage*) getNotesPage:(NSUInteger)page
+{
+    return [notes objectAtIndex:page];
+    
+}
+- (void) removeNotesPage:(NSUInteger)page
+{
+    return [notes removeObjectAtIndex:page];
+    
+}
+- (NSUInteger) getPages
+{
+    return [notes count];
+}
+
+- (void) addEvent:(NoteEvent*)note page:(NSUInteger)page
+{
+    [[notes objectAtIndex:page] addTextEvent:note];
+}
+
+@end
