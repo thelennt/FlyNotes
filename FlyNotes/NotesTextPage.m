@@ -22,15 +22,27 @@
     type = @"NotesTextPage";
     number = anumber;
     background = abackground;
+    return self;
 }
+
+- (id)init:(NSDictionary*)dictionary
+{
+    type = @"NotesTextPage";
+    number = dictionary[@"number"];
+    background = dictionary[@"background"];
+    return self;
+}
+
 -(BOOL)changeBackground:(NSString*)abackground
 {
     background = abackground;
+    return true;
     
 }
 -(BOOL)addEvent:(TextNoteEvent*)aevent
 {
     [events addObject:aevent];
+    return true;
 }
 
 
@@ -38,7 +50,7 @@
 {
     XMLWriter *writer = [[XMLWriter alloc] init];
     
-    [writer writeStartElement:@"TextNoteEvent"];
+    [writer writeStartElement:@"NotesTextPage"];
     [writer writeAttribute:@"type" value:type];
     [writer writeAttribute:@"number" value:[number stringValue]];
     [writer writeAttribute:@"background" value:background];

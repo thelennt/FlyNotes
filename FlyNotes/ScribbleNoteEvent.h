@@ -18,13 +18,14 @@
     NSNumber* objectid;
     NSString* type;
     NSNumber* timeStamp;
-    NSArray* locations;
-    NSNumber* location;
-    NoteStyle* style;
+    NSMutableArray* locations;
+    CGPoint* location;
+    ScribbleStyle* style;
 }
 
 -(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
--(void)addPoint:(CGPoint)apoint;
+-(void)addPoint:(CGPoint*)apoint;
+- (id)init:(NSDictionary*)dictionary
 
 @property (readonly) NSPointerArray* locations;
 @property (readonly) ScribbleStyle* style;

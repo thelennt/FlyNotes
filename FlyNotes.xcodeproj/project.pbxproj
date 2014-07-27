@@ -55,6 +55,9 @@
 		A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
 		A7ACC42D1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
 		A7ACC42E1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
+		A7D0E368198412ED008B07A1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E367198412ED008B07A1 /* MainView.xib */; };
+		A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0E36B198438BE008B07A1 /* MainUI.m */; };
+		A7D0E36E19844E6C008B07A1 /* Container.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E36D19844E6C008B07A1 /* Container.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,10 @@
 		A7ACC427176C0BE200191A86 /* CanvasStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasStore.m; sourceTree = "<group>"; };
 		A7ACC42B1771405100191A86 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		A7ACC42C1771405100191A86 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		A7D0E367198412ED008B07A1 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		A7D0E36A198438BE008B07A1 /* MainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainUI.h; sourceTree = "<group>"; };
+		A7D0E36B198438BE008B07A1 /* MainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainUI.m; sourceTree = "<group>"; };
+		A7D0E36D19844E6C008B07A1 /* Container.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Container.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +177,8 @@
 		A7145E501744650D0051C1A1 = {
 			isa = PBXGroup;
 			children = (
+				A7D0E36D19844E6C008B07A1 /* Container.xib */,
+				A7D0E367198412ED008B07A1 /* MainView.xib */,
 				A78E981317EBC38300E31363 /* AVFoundation.framework */,
 				A7145E621744650D0051C1A1 /* FlyNotes */,
 				A7145E8C1744650E0051C1A1 /* FlyNotesTests */,
@@ -202,6 +211,7 @@
 		A7145E621744650D0051C1A1 /* FlyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				A7D0E36919843868008B07A1 /* Views */,
 				A7ACC42A1771402F00191A86 /* Utilities */,
 				A7ACC421176C0BB100191A86 /* DataStore */,
 				A7ACC418176C0AAE00191A86 /* EventHandlers */,
@@ -372,6 +382,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		A7D0E36919843868008B07A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0E36A198438BE008B07A1 /* MainUI.h */,
+				A7D0E36B198438BE008B07A1 /* MainUI.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,6 +474,8 @@
 				A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */,
 				A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */,
 				A78E981A17F1102300E31363 /* MainScreen.xib in Resources */,
+				A7D0E368198412ED008B07A1 /* MainView.xib in Resources */,
+				A7D0E36E19844E6C008B07A1 /* Container.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +531,7 @@
 				A7ACC424176C0BCF00191A86 /* NotesStore.m in Sources */,
 				A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */,
 				A7ACC42D1771405100191A86 /* Stack.m in Sources */,
+				A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

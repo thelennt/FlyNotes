@@ -19,6 +19,7 @@
 }
 
 - (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;
+- (id)init:(NSDictionary*)dictionary;
 
 @property (readonly) NSString* color;
 @property (readonly) NSNumber* depth;

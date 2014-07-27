@@ -26,5 +26,5 @@
 @optional
 -(BOOL)addScribbleEvent:(ScribbleNoteEvent*)aevent;
 -(BOOL)addTextEvent:(TextNoteEvent*)aevent;
-
+- (id)init:(NSDictionary*)dictionary;
 @end

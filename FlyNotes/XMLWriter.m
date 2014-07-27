@@ -240,7 +240,7 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 			[self write:@"\""];			
 			
 			encoding = aEncoding;
-			[aEncoding retain];
+			//[aEncoding retain];
 		}
 		[self write:@" ?>"];	
 		

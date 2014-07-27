@@ -7,6 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import "NotesPage.h"
+#import "NoteEvent.h"
 
 @interface NotesTextPage : NSObject <NotesPage>
 {
@@ -18,8 +19,8 @@
     NSMutableArray* events;
     CGPoint* dimensions;
 }
-//-(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
-/*
+-(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
+
 -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground;
 -(BOOL)changeBackground:(NSString*)abackground;
 -(BOOL)addEvent:(NoteEvent*)aevent;
@@ -27,7 +28,8 @@
 @property (readonly) NSString* type;
 @property (readonly) NSNumber* number;
 @property (readonly) NSString* background;
-@property (readonly) NSArray* events;
+@property (readonly) NSMutableArray* events;
 @property (readonly) NSString* NotesPageNode;
-*/
+
+- (id)init:(NSDictionary*)dictionary;
 @end

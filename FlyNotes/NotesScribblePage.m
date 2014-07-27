@@ -19,18 +19,29 @@
 
 -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground
 {
-    type = @"NotesTextPage";
+    type = @"NotesScribblePage";
     number = anumber;
     background = abackground;
+    return self;
 }
+
+- (id)init:(NSDictionary*)dictionary
+{
+    type = @"NotesScribblePage";
+    number = dictionary[@"number"];
+    background = dictionary[@"background"];
+    return self;
+}
+
 -(BOOL)changeBackground:(NSString*)abackground
 {
     background = abackground;
-    
+    return true;
 }
 -(BOOL)addEvent:(ScribbleNoteEvent*)aevent
 {
     [events addObject:aevent];
+    return true;
 }
 
 
@@ -38,7 +49,7 @@
 {
     XMLWriter *writer = [[XMLWriter alloc] init];
     
-    [writer writeStartElement:@"TextNoteEvent"];
+    [writer writeStartElement:@"NotesScribblePage"];
     [writer writeAttribute:@"type" value:type];
     [writer writeAttribute:@"number" value:[number stringValue]];
     [writer writeAttribute:@"background" value:background];

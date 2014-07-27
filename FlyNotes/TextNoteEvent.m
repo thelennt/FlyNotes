@@ -28,6 +28,17 @@
     return self;
 }
 
+- (id)init:(NSDictionary*)dictionary
+{
+    objectid = dictionary[@"objectid"];
+    timeStamp = dictionary[@"timeStamp"];;
+    style = dictionary[@"style"];;
+    type = @"TextNote";
+    location = dictionary[@"location"];;
+    return self;
+}
+
+
 -(NSString*) noteEventNode
 {
     XMLWriter *writer = [[XMLWriter alloc] init];

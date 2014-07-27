@@ -23,6 +23,7 @@
 
 -(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(NoteStyle*)astyle Location:(NSNumber*)alocation;
 -(void)addText:(NSString*)charText;
+- (id)init:(NSDictionary*)dictionary
 
 @property (readonly) NSMutableString* charText;
 @property (readonly) NSNumber* location;

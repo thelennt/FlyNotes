@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "NotesStore.h"
 
-@interface NotesParser : NSObject
+
+@interface NotesParser : NSObject <NSXMLParserDelegate>
 {
     @private
     NotesStore *notes;

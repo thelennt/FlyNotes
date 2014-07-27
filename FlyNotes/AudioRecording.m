@@ -7,12 +7,13 @@
 //
 
 #import "AudioRecording.h"
+#import <AVAudioSession.h>
 
 @implementation AudioRecording
+
+
 - (void)init
 {
-    [super viewDidLoad];
-   
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],

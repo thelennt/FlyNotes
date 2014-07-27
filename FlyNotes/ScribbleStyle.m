@@ -25,6 +25,16 @@
     return self;
 }
 
+- (id)init:(NSDictionary*)dictionary
+{
+    
+    type = @"ScribbleStyle";
+    color = dictionary[@"color"];;
+    depth = dictionary[@"depth"];;
+    identifier = dictionary[@"identifier"];;
+    return self;
+}
+
 - (NSString*) styleNode
 {
     XMLWriter *writer = [[XMLWriter alloc] init];

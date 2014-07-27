@@ -28,6 +28,17 @@
     return self;
 }
 
+- (id)init:(NSDictionary*)dictionary
+{
+    type = @"NoteStyle";
+    identifier = dictionary[@"identifier"];
+    bold = dictionary[@"bold"];
+    italic = dictionary[@"italic"];
+    underline = dictionary[@"underline"];
+    font = dictionary[@"font"];
+    return self;
+}
+
 - (NSString*) styleNode
 {
     XMLWriter *writer = [[XMLWriter alloc] init];
