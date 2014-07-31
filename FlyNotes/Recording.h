@@ -11,6 +11,6 @@
 
 @protocol Recording <NSObject>
 
--(NSXMLElement*)createRecordingNode;
+-(NSString*)createRecordingNode;
 
 @end

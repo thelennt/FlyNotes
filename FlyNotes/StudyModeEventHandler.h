@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NotesStore.h"
+#import "CanvasStore.h"
+#import "Recording.h"
 
 @interface StudyModeEventHandler : NSObject
 {
     NotesStore* mNotesStore;
     CanvasStore* mCanvasStore;
-    Recording* recording;
+    NSObject* recording;
 }
-- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(Recording*)recording;
+- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(NSObject*)recording;
 
 - (void) screenselected:(NSNumber*)x y:(NSNumber*) y;
 - (void) timeLapse:(NSNumber*)time;

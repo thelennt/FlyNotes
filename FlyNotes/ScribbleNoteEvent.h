@@ -25,9 +25,9 @@
 
 -(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
 -(void)addPoint:(CGPoint*)apoint;
-- (id)init:(NSDictionary*)dictionary
+- (id)init:(NSDictionary*)dictionary;
 
-@property (readonly) NSPointerArray* locations;
+@property (readonly) NSMutableArray* locations;
 @property (readonly) ScribbleStyle* style;
 @property (readonly) NSNumber* objectid;
 @property (readonly) NSString* type;

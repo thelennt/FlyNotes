@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Recording.h"
+#import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVAudioRecorder.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface AudioRecording : NSObject <Recording>
 {

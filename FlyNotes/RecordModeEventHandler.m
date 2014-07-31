@@ -8,7 +8,7 @@
 
 #import "RecordModeEventHandler.h"
 #import "NotesPage.h"
-#inport "Recording.h"
+#import "Recording.h"
 
 @implementation RecordModeEventHandler
 

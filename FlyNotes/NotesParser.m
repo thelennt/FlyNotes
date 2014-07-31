@@ -38,8 +38,7 @@ NSXMLParser *parser;
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
-
-        [elementStack push:elementName];
+    [elementStack push:elementName];
     if ( [elementName isEqualToString:@"ScribbleNoteEvent"])
     {
         ScribbleNoteEvent *event = [[ScribbleNoteEvent alloc] init: attributeDict];

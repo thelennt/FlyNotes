@@ -7,6 +7,8 @@
 //
 
 #import "NotesStore.h"
+#import "NotesPage.h"
+#import "NotesTextPage.h"
 
 @implementation NotesStore
 
@@ -14,29 +16,35 @@
 {
     notes = [[NSMutableArray alloc] init];
 }
-- (void) newNotesPage:(NotesPage*)page
+
+- (void) newNotesPage:(NSObject*)page
 {
     [notes addObject:page];
 
 }
-- (NotesPage*) getNotesPage:(NSUInteger)page
+    
+- (NSObject*) getNotesPage:(NSUInteger)page
 {
     return [notes objectAtIndex:page];
-    
+   
 }
+    
 - (void) removeNotesPage:(NSUInteger)page
 {
     return [notes removeObjectAtIndex:page];
     
 }
+
 - (NSUInteger) getPages
 {
     return [notes count];
 }
 
-- (void) addEvent:(NoteEvent*)note page:(NSUInteger)page
+- (void) addEvent:(NSObject*)note page:(NSUInteger)page
 {
-    [[notes objectAtIndex:page] addTextEvent:note];
+    
+    [[notes objectAtIndex:page] addTextEvent:(TextNoteEvent*)note] ;
 }
+
 
 @end

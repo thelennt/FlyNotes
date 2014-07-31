@@ -7,12 +7,16 @@
 //
 
 #import "AudioRecording.h"
-#import <AVAudioSession.h>
+#import "Recording.h"
+#import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVAudioRecorder.h>
+#import <AVFoundation/AVAudioSession.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation AudioRecording
 
 
-- (void)init
+- (id)init
 {
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
@@ -41,7 +45,7 @@
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+    //[super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
@@ -76,7 +80,7 @@
 
 - (IBAction)play
 {
-    this.play:0;
+    //this.play:0;
 }
 
 - (IBAction)play:(NSNumber *) thisTime
@@ -85,7 +89,7 @@
     {
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:recorder.url error:nil];
         [player setDelegate:self];
-        [player playAtTime: thisTime];
+        //[player playAtTime: thisTime];
     }
 }
 

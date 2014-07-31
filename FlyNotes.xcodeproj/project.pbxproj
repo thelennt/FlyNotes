@@ -58,6 +58,8 @@
 		A7D0E368198412ED008B07A1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E367198412ED008B07A1 /* MainView.xib */; };
 		A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0E36B198438BE008B07A1 /* MainUI.m */; };
 		A7D0E36E19844E6C008B07A1 /* Container.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E36D19844E6C008B07A1 /* Container.xib */; };
+		A7D0E37019872D10008B07A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0E36F19872D0F008B07A1 /* Security.framework */; };
+		A7D0E37219872D43008B07A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0E37119872D42008B07A1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		A7D0E36A198438BE008B07A1 /* MainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainUI.h; sourceTree = "<group>"; };
 		A7D0E36B198438BE008B07A1 /* MainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainUI.m; sourceTree = "<group>"; };
 		A7D0E36D19844E6C008B07A1 /* Container.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Container.xib; sourceTree = "<group>"; };
+		A7D0E36F19872D0F008B07A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A7D0E37119872D42008B07A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D0E37219872D43008B07A1 /* QuartzCore.framework in Frameworks */,
+				A7D0E37019872D10008B07A1 /* Security.framework in Frameworks */,
 				A78E981417EBC38300E31363 /* AVFoundation.framework in Frameworks */,
 				A7145E5D1744650D0051C1A1 /* UIKit.framework in Frameworks */,
 				A7145E5F1744650D0051C1A1 /* Foundation.framework in Frameworks */,
@@ -177,6 +183,8 @@
 		A7145E501744650D0051C1A1 = {
 			isa = PBXGroup;
 			children = (
+				A7D0E37119872D42008B07A1 /* QuartzCore.framework */,
+				A7D0E36F19872D0F008B07A1 /* Security.framework */,
 				A7D0E36D19844E6C008B07A1 /* Container.xib */,
 				A7D0E367198412ED008B07A1 /* MainView.xib */,
 				A78E981317EBC38300E31363 /* AVFoundation.framework */,

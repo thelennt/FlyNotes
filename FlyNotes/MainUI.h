@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainUI : UIViewController
+@interface MainUI : UIView
 
 @property (weak, nonatomic) IBOutlet UIButton *PlayPause;
 

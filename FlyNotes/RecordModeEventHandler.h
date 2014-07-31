@@ -18,12 +18,12 @@
 {
     NotesStore* mNotesStore;
     CanvasStore* mCanvasStore;
-    Recording* recording;
+    NSObject* recording;
 }
-- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(Recording*)recording;
+- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(NSObject*)recording;
 - (void) newPage;
 - (void) newStyle:(Style *)style;
-- (void) newEvent:(NoteEvent *) event;
+- (void) newEvent:(NSObject *) event;
 
 - (void) nextPage;
 - (void) previousPage;

@@ -16,8 +16,8 @@
 }
 
 - (id) init;
-- (void) newNotesPage:(NotesPage*)page;
-- (NotesPage*) getNotesPage:(NSUInteger)page;
+- (void) newNotesPage:(NSObject*)page;
+- (NSObject*) getNotesPage:(NSUInteger)page;
 - (void) removeNotesPage:(NSUInteger)page;
 - (NSUInteger) getPages;
 

@@ -23,7 +23,7 @@
 
 -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground;
 -(BOOL)changeBackground:(NSString*)abackground;
--(BOOL)addEvent:(NoteEvent*)aevent;
+-(BOOL)addEvent:(TextNoteEvent*)aevent;
 
 @property (readonly) NSString* type;
 @property (readonly) NSNumber* number;

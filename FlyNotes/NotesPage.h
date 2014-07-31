@@ -22,9 +22,11 @@
 
 -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground Dimensions:(CGPoint*)adimensions;
 -(BOOL)changeBackground:(NSString*)abackground;
+- (id)init:(NSDictionary*)dictionary;
+
 
 @optional
 -(BOOL)addScribbleEvent:(ScribbleNoteEvent*)aevent;
 -(BOOL)addTextEvent:(TextNoteEvent*)aevent;
-- (id)init:(NSDictionary*)dictionary;
+
 @end

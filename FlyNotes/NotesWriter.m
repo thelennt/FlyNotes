@@ -12,6 +12,7 @@
 
 - (void)createXMLDocumentFromFile:(NSString *)file
 {
+    /*
     NSXMLDocument *xmlDoc;
     NSError *err=nil;
     NSURL *furl = [NSURL fileURLWithPath:file];
@@ -37,10 +38,12 @@
     if (err) {
         [self handleError:err];
     }
+     */
 }
 
 - (void)createXMLDocumentFromFile
 {
+    /*
     NSXMLElement *client_state = [[NSXMLElement alloc] initWithName:@"client_state"];
     
     NSXMLElement *platform = [[NSXMLElement alloc] initWithName:@"platform"];
@@ -59,6 +62,7 @@
     [xmlDoc setVersion:@"1.0"];
     [xmlDoc setCharacterEncoding:@"UTF-8"];
     [root addChild:[NSXMLNode commentWithStringValue:@"Hello world!"]];
+     */
 }
 
 @end
