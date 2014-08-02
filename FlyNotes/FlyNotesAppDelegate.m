@@ -7,11 +7,16 @@
 //
 
 #import "FlyNotesAppDelegate.h"
+#import "MainUI.h"
 
 @implementation FlyNotesAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIViewController *myViewController = [[MainUI alloc]initWithNibName:@"MainView" bundle:nil];
+    
+    [self.window setRootViewController:myViewController];
+    return YES;
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;

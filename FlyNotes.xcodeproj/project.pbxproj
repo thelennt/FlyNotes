@@ -35,6 +35,7 @@
 		A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EBA174DAC960051C1A1 /* NotesWindow.xib */; };
 		A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */; };
 		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
+		A7484CED198C891E003427CC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7484CEC198C891E003427CC /* TestView.m */; };
 		A78E981417EBC38300E31363 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E981317EBC38300E31363 /* AVFoundation.framework */; };
 		A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981517F1063000E31363 /* ScribbleCanvas.xib */; };
 		A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981717F10C7000E31363 /* NoteCanvas.xib */; };
@@ -57,9 +58,9 @@
 		A7ACC42E1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
 		A7D0E368198412ED008B07A1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E367198412ED008B07A1 /* MainView.xib */; };
 		A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0E36B198438BE008B07A1 /* MainUI.m */; };
-		A7D0E36E19844E6C008B07A1 /* Container.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E36D19844E6C008B07A1 /* Container.xib */; };
 		A7D0E37019872D10008B07A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0E36F19872D0F008B07A1 /* Security.framework */; };
 		A7D0E37219872D43008B07A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D0E37119872D42008B07A1 /* QuartzCore.framework */; };
+		A7D0E375198B29E4008B07A1 /* Testing123ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D0E374198B29E4008B07A1 /* Testing123ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDropBox.h; sourceTree = "<group>"; };
 		A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDropBox.m; sourceTree = "<group>"; };
 		A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
+		A7484CEB198C891E003427CC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		A7484CEC198C891E003427CC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		A78E981317EBC38300E31363 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A78E981517F1063000E31363 /* ScribbleCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScribbleCanvas.xib; sourceTree = "<group>"; };
 		A78E981717F10C7000E31363 /* NoteCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCanvas.xib; sourceTree = "<group>"; };
@@ -147,9 +150,10 @@
 		A7D0E367198412ED008B07A1 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		A7D0E36A198438BE008B07A1 /* MainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainUI.h; sourceTree = "<group>"; };
 		A7D0E36B198438BE008B07A1 /* MainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainUI.m; sourceTree = "<group>"; };
-		A7D0E36D19844E6C008B07A1 /* Container.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Container.xib; sourceTree = "<group>"; };
 		A7D0E36F19872D0F008B07A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A7D0E37119872D42008B07A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7D0E373198B29E4008B07A1 /* Testing123ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Testing123ViewController.h; sourceTree = "<group>"; };
+		A7D0E374198B29E4008B07A1 /* Testing123ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Testing123ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +189,6 @@
 			children = (
 				A7D0E37119872D42008B07A1 /* QuartzCore.framework */,
 				A7D0E36F19872D0F008B07A1 /* Security.framework */,
-				A7D0E36D19844E6C008B07A1 /* Container.xib */,
 				A7D0E367198412ED008B07A1 /* MainView.xib */,
 				A78E981317EBC38300E31363 /* AVFoundation.framework */,
 				A7145E621744650D0051C1A1 /* FlyNotes */,
@@ -395,6 +398,10 @@
 			children = (
 				A7D0E36A198438BE008B07A1 /* MainUI.h */,
 				A7D0E36B198438BE008B07A1 /* MainUI.m */,
+				A7D0E373198B29E4008B07A1 /* Testing123ViewController.h */,
+				A7D0E374198B29E4008B07A1 /* Testing123ViewController.m */,
+				A7484CEB198C891E003427CC /* TestView.h */,
+				A7484CEC198C891E003427CC /* TestView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -483,7 +490,6 @@
 				A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */,
 				A78E981A17F1102300E31363 /* MainScreen.xib in Resources */,
 				A7D0E368198412ED008B07A1 /* MainView.xib in Resources */,
-				A7D0E36E19844E6C008B07A1 /* Container.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +546,8 @@
 				A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */,
 				A7ACC42D1771405100191A86 /* Stack.m in Sources */,
 				A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */,
+				A7D0E375198B29E4008B07A1 /* Testing123ViewController.m in Sources */,
+				A7484CED198C891E003427CC /* TestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
