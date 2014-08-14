@@ -12,5 +12,50 @@
 
 @implementation RecordModeEventHandler
 
+- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(NSObject*)recording
+{
+    
+    
+}
+- (void) newPage
+{
+    
+    
+}
+- (void) newStyle:(Style *)style
+{
+    
+}
+- (void) newEvent:(NSObject *) event
+{
+    
+}
+
+- (void) nextPage
+{
+    
+}
+- (void) previousPage
+{
+    
+}
+- (void) deletePage
+{
+    
+}
+
+- (void) pauseRecording
+{
+    
+}
+- (void) stopRecording
+{
+
+}
+
+- (void) save
+{
+    
+}
 
 @end

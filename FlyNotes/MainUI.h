@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface MainUI : UIViewController
+{
+    
+    CGPoint lastPoint;
+    CGFloat opacity;
+    BOOL mouseSwiped;
+    CGFloat brush;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;
 
 @property (weak, nonatomic) IBOutlet UIButton *PlayPause;
 
@@ -38,5 +48,7 @@
 - (IBAction)TextEditingDone:(id)sender;
 
 - (IBAction)PreviousButtonPressed:(id)sender;
+
+
 
 @end

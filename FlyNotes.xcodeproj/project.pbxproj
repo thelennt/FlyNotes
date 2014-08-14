@@ -11,15 +11,9 @@
 		A7145E5F1744650D0051C1A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7145E5E1744650D0051C1A1 /* Foundation.framework */; };
 		A7145E611744650D0051C1A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7145E601744650D0051C1A1 /* CoreGraphics.framework */; };
 		A7145E671744650D0051C1A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7145E651744650D0051C1A1 /* InfoPlist.strings */; };
-		A7145E691744650D0051C1A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145E681744650D0051C1A1 /* main.m */; };
-		A7145E6D1744650D0051C1A1 /* FlyNotesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145E6C1744650D0051C1A1 /* FlyNotesAppDelegate.m */; };
 		A7145E6F1744650D0051C1A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7145E6E1744650D0051C1A1 /* Default.png */; };
 		A7145E711744650D0051C1A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7145E701744650D0051C1A1 /* Default@2x.png */; };
 		A7145E731744650D0051C1A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7145E721744650D0051C1A1 /* Default-568h@2x.png */; };
-		A7145E761744650E0051C1A1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7145E741744650D0051C1A1 /* MainStoryboard_iPhone.storyboard */; };
-		A7145E791744650E0051C1A1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7145E771744650E0051C1A1 /* MainStoryboard_iPad.storyboard */; };
-		A7145E7C1744650E0051C1A1 /* FlyNotesMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145E7B1744650E0051C1A1 /* FlyNotesMasterViewController.m */; };
-		A7145E7F1744650E0051C1A1 /* FlyNotesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145E7E1744650E0051C1A1 /* FlyNotesDetailViewController.m */; };
 		A7145E871744650E0051C1A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7145E861744650E0051C1A1 /* SenTestingKit.framework */; };
 		A7145E881744650E0051C1A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7145E5C1744650D0051C1A1 /* UIKit.framework */; };
 		A7145E891744650E0051C1A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7145E5E1744650D0051C1A1 /* Foundation.framework */; };
@@ -31,15 +25,19 @@
 		A7145EAF174DA06B0051C1A1 /* NotesScribblePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EAE174DA06B0051C1A1 /* NotesScribblePage.m */; };
 		A7145EB1174DA0810051C1A1 /* NotesTextPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EB0174DA0810051C1A1 /* NotesTextPage.m */; };
 		A7145EB7174DA2DE0051C1A1 /* NotesWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EB6174DA2DE0051C1A1 /* NotesWriter.m */; };
-		A7145EB9174DAC500051C1A1 /* NotesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EB8174DAC500051C1A1 /* NotesView.xib */; };
-		A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7145EBA174DAC960051C1A1 /* NotesWindow.xib */; };
 		A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */; };
 		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
 		A7484CED198C891E003427CC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7484CEC198C891E003427CC /* TestView.m */; };
+		A7715B9219982FF9004B3A15 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7715B9019982FF9004B3A15 /* MainStoryboard_iPhone.storyboard */; };
+		A7715B9319982FF9004B3A15 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7715B9119982FF9004B3A15 /* MainStoryboard_iPad.storyboard */; };
+		A7715B96199C4CB0004B3A15 /* SaveLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = A7715B95199C4CB0004B3A15 /* SaveLocal.m */; };
 		A78E981417EBC38300E31363 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E981317EBC38300E31363 /* AVFoundation.framework */; };
 		A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981517F1063000E31363 /* ScribbleCanvas.xib */; };
 		A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981717F10C7000E31363 /* NoteCanvas.xib */; };
 		A78E981A17F1102300E31363 /* MainScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981917F1102300E31363 /* MainScreen.xib */; };
+		A7997011198DA2CB004DC133 /* FlyNotesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A799700E198DA2CA004DC133 /* FlyNotesAppDelegate.m */; };
+		A7997012198DA2CB004DC133 /* FlyNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7997010198DA2CA004DC133 /* FlyNotesViewController.m */; };
+		A7997014198DA306004DC133 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7997013198DA306004DC133 /* main.m */; };
 		A7ACC387175D792C00191A86 /* ScribbleStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC386175D792C00191A86 /* ScribbleStyle.m */; };
 		A7ACC38A175D793A00191A86 /* NoteStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC389175D793A00191A86 /* NoteStyle.m */; };
 		A7ACC39717600C1A00191A86 /* AudioRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC39617600C1A00191A86 /* AudioRecording.m */; };
@@ -80,19 +78,10 @@
 		A7145E601744650D0051C1A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A7145E641744650D0051C1A1 /* FlyNotes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlyNotes-Info.plist"; sourceTree = "<group>"; };
 		A7145E661744650D0051C1A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A7145E681744650D0051C1A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7145E6A1744650D0051C1A1 /* FlyNotes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlyNotes-Prefix.pch"; sourceTree = "<group>"; };
-		A7145E6B1744650D0051C1A1 /* FlyNotesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyNotesAppDelegate.h; sourceTree = "<group>"; };
-		A7145E6C1744650D0051C1A1 /* FlyNotesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyNotesAppDelegate.m; sourceTree = "<group>"; };
 		A7145E6E1744650D0051C1A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A7145E701744650D0051C1A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7145E721744650D0051C1A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A7145E751744650E0051C1A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		A7145E781744650E0051C1A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		A7145E7A1744650E0051C1A1 /* FlyNotesMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyNotesMasterViewController.h; sourceTree = "<group>"; };
-		A7145E7B1744650E0051C1A1 /* FlyNotesMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyNotesMasterViewController.m; sourceTree = "<group>"; };
-		A7145E7D1744650E0051C1A1 /* FlyNotesDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyNotesDetailViewController.h; sourceTree = "<group>"; };
-		A7145E7E1744650E0051C1A1 /* FlyNotesDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyNotesDetailViewController.m; sourceTree = "<group>"; };
 		A7145E851744650E0051C1A1 /* FlyNotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyNotesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7145E861744650E0051C1A1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A7145E8E1744650E0051C1A1 /* FlyNotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlyNotesTests-Info.plist"; sourceTree = "<group>"; };
@@ -111,18 +100,26 @@
 		A7145EB0174DA0810051C1A1 /* NotesTextPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTextPage.m; sourceTree = "<group>"; };
 		A7145EB5174DA2DE0051C1A1 /* NotesWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesWriter.h; sourceTree = "<group>"; };
 		A7145EB6174DA2DE0051C1A1 /* NotesWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesWriter.m; sourceTree = "<group>"; };
-		A7145EB8174DAC500051C1A1 /* NotesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesView.xib; sourceTree = "<group>"; };
-		A7145EBA174DAC960051C1A1 /* NotesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesWindow.xib; sourceTree = "<group>"; };
 		A73A03DC174EEE1D00AD3CF3 /* SaveMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveMe.h; sourceTree = "<group>"; };
 		A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDropBox.h; sourceTree = "<group>"; };
 		A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDropBox.m; sourceTree = "<group>"; };
 		A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
 		A7484CEB198C891E003427CC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		A7484CEC198C891E003427CC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		A7715B9019982FF9004B3A15 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A7715B9119982FF9004B3A15 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		A7715B94199C4CAF004B3A15 /* SaveLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveLocal.h; sourceTree = "<group>"; };
+		A7715B95199C4CB0004B3A15 /* SaveLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveLocal.m; sourceTree = "<group>"; };
 		A78E981317EBC38300E31363 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A78E981517F1063000E31363 /* ScribbleCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScribbleCanvas.xib; sourceTree = "<group>"; };
 		A78E981717F10C7000E31363 /* NoteCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCanvas.xib; sourceTree = "<group>"; };
 		A78E981917F1102300E31363 /* MainScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreen.xib; sourceTree = "<group>"; };
+		A799700D198DA2CA004DC133 /* FlyNotesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlyNotesAppDelegate.h; path = ../../NewDevTest/NewDevTest/FlyNotesAppDelegate.h; sourceTree = "<group>"; };
+		A799700E198DA2CA004DC133 /* FlyNotesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlyNotesAppDelegate.m; path = ../../NewDevTest/NewDevTest/FlyNotesAppDelegate.m; sourceTree = "<group>"; };
+		A799700F198DA2CA004DC133 /* FlyNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlyNotesViewController.h; path = ../../NewDevTest/NewDevTest/FlyNotesViewController.h; sourceTree = "<group>"; };
+		A7997010198DA2CA004DC133 /* FlyNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlyNotesViewController.m; path = ../../NewDevTest/NewDevTest/FlyNotesViewController.m; sourceTree = "<group>"; };
+		A7997013198DA306004DC133 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../NewDevTest/NewDevTest/main.m; sourceTree = "<group>"; };
+		A7997015198DA30D004DC133 /* NewDevTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NewDevTest-Prefix.pch"; path = "../../NewDevTest/NewDevTest/NewDevTest-Prefix.pch"; sourceTree = "<group>"; };
 		A7ACC384175D790B00191A86 /* Style.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Style.h; sourceTree = "<group>"; };
 		A7ACC385175D792C00191A86 /* ScribbleStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleStyle.h; sourceTree = "<group>"; };
 		A7ACC386175D792C00191A86 /* ScribbleStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleStyle.m; sourceTree = "<group>"; };
@@ -233,17 +230,11 @@
 				A7145EB4174DA0D90051C1A1 /* Pages */,
 				A7145EB3174DA0CA0051C1A1 /* XML */,
 				A7145EB2174DA08C0051C1A1 /* Events */,
-				A7145E6B1744650D0051C1A1 /* FlyNotesAppDelegate.h */,
-				A7145E6C1744650D0051C1A1 /* FlyNotesAppDelegate.m */,
-				A7145E741744650D0051C1A1 /* MainStoryboard_iPhone.storyboard */,
-				A7145E771744650E0051C1A1 /* MainStoryboard_iPad.storyboard */,
-				A7145E7A1744650E0051C1A1 /* FlyNotesMasterViewController.h */,
-				A7145E7B1744650E0051C1A1 /* FlyNotesMasterViewController.m */,
-				A7145E7D1744650E0051C1A1 /* FlyNotesDetailViewController.h */,
-				A7145E7E1744650E0051C1A1 /* FlyNotesDetailViewController.m */,
+				A799700D198DA2CA004DC133 /* FlyNotesAppDelegate.h */,
+				A799700E198DA2CA004DC133 /* FlyNotesAppDelegate.m */,
+				A799700F198DA2CA004DC133 /* FlyNotesViewController.h */,
+				A7997010198DA2CA004DC133 /* FlyNotesViewController.m */,
 				A7145E631744650D0051C1A1 /* Supporting Files */,
-				A7145EB8174DAC500051C1A1 /* NotesView.xib */,
-				A7145EBA174DAC960051C1A1 /* NotesWindow.xib */,
 			);
 			path = FlyNotes;
 			sourceTree = "<group>";
@@ -252,8 +243,11 @@
 			isa = PBXGroup;
 			children = (
 				A7145E641744650D0051C1A1 /* FlyNotes-Info.plist */,
+				A7715B9019982FF9004B3A15 /* MainStoryboard_iPhone.storyboard */,
+				A7715B9119982FF9004B3A15 /* MainStoryboard_iPad.storyboard */,
+				A7997015198DA30D004DC133 /* NewDevTest-Prefix.pch */,
 				A7145E651744650D0051C1A1 /* InfoPlist.strings */,
-				A7145E681744650D0051C1A1 /* main.m */,
+				A7997013198DA306004DC133 /* main.m */,
 				A7145E6A1744650D0051C1A1 /* FlyNotes-Prefix.pch */,
 				A7145E6E1744650D0051C1A1 /* Default.png */,
 				A7145E701744650D0051C1A1 /* Default@2x.png */,
@@ -324,6 +318,8 @@
 				A73A03DC174EEE1D00AD3CF3 /* SaveMe.h */,
 				A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */,
 				A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */,
+				A7715B94199C4CAF004B3A15 /* SaveLocal.h */,
+				A7715B95199C4CB0004B3A15 /* SaveLocal.m */,
 			);
 			name = DropBox;
 			sourceTree = "<group>";
@@ -482,14 +478,12 @@
 				A7145E6F1744650D0051C1A1 /* Default.png in Resources */,
 				A7145E711744650D0051C1A1 /* Default@2x.png in Resources */,
 				A7145E731744650D0051C1A1 /* Default-568h@2x.png in Resources */,
-				A7145E761744650E0051C1A1 /* MainStoryboard_iPhone.storyboard in Resources */,
-				A7145E791744650E0051C1A1 /* MainStoryboard_iPad.storyboard in Resources */,
-				A7145EB9174DAC500051C1A1 /* NotesView.xib in Resources */,
-				A7145EBB174DAC960051C1A1 /* NotesWindow.xib in Resources */,
 				A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */,
 				A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */,
 				A78E981A17F1102300E31363 /* MainScreen.xib in Resources */,
 				A7D0E368198412ED008B07A1 /* MainView.xib in Resources */,
+				A7715B9219982FF9004B3A15 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A7715B9319982FF9004B3A15 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,10 +518,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7145E691744650D0051C1A1 /* main.m in Sources */,
-				A7145E6D1744650D0051C1A1 /* FlyNotesAppDelegate.m in Sources */,
-				A7145E7C1744650E0051C1A1 /* FlyNotesMasterViewController.m in Sources */,
-				A7145E7F1744650E0051C1A1 /* FlyNotesDetailViewController.m in Sources */,
 				A7145E9F174CEE520051C1A1 /* NotesParser.m in Sources */,
 				A7145EA9174D9F7E0051C1A1 /* TextNoteEvent.m in Sources */,
 				A7145EAC174DA02D0051C1A1 /* ScribbleNoteEvent.m in Sources */,
@@ -548,6 +538,10 @@
 				A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */,
 				A7D0E375198B29E4008B07A1 /* Testing123ViewController.m in Sources */,
 				A7484CED198C891E003427CC /* TestView.m in Sources */,
+				A7997011198DA2CB004DC133 /* FlyNotesAppDelegate.m in Sources */,
+				A7997012198DA2CB004DC133 /* FlyNotesViewController.m in Sources */,
+				A7997014198DA306004DC133 /* main.m in Sources */,
+				A7715B96199C4CB0004B3A15 /* SaveLocal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,22 +576,6 @@
 				A7145E661744650D0051C1A1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A7145E741744650D0051C1A1 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7145E751744650E0051C1A1 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		A7145E771744650E0051C1A1 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7145E781744650E0051C1A1 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		A7145E8F1744650E0051C1A1 /* InfoPlist.strings */ = {
@@ -679,6 +657,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlyNotes/FlyNotes-Prefix.pch";
 				INFOPLIST_FILE = "FlyNotes/FlyNotes-Info.plist";
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -694,6 +673,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlyNotes/FlyNotes-Prefix.pch";
 				INFOPLIST_FILE = "FlyNotes/FlyNotes-Info.plist";
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
