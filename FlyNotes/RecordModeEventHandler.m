@@ -8,54 +8,81 @@
 
 #import "RecordModeEventHandler.h"
 #import "NotesPage.h"
+#import "NotesTextPage.h"
+#import "NotesCanvasPage.h"
 #import "Recording.h"
+#import "SaveLocal.h"
 
 @implementation RecordModeEventHandler
 
-- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(NSObject*)recording
+- (id) init:(NotesStore*)lstore canvasStore:(NotesStore*)lcanvas recording:(id)lrecording background:(NSString*)lbackground
 {
-    
-    
+    mNotesStore = lstore;
+    mCanvasStore = lcanvas;
+    recording = lrecording;
+    currentPage = 1;
+    recordingTime = 0;
+    currentStyle = [[ScribbleStyle alloc]init];
+    defaultBackground = lbackground;
 }
-- (void) newPage
+- (void) newNotesPage
 {
+    NotesTextPage* temp = [[NotesTextPage alloc]init:[mNotesStore count] Background:defaultBackground];
     
-    
+    [mNotesStore newNotesPage:temp]:
+}
+- (void) newCanvasPage
+{
+    NotesCanvasPage* temp = [[NotesCanvasPage alloc]init:[mCanvasStore count] Background:defaultBackground];
+
+    [mCanvasStore newNotesPage:temp]:
 }
 - (void) newStyle:(Style *)style
 {
-    
+    currentStyle = style;
 }
-- (void) newEvent:(NSObject *) event
+- (void) newEvent:(id) event
 {
-    
+    [mNotesStore addEvent:event page:currentPage];
 }
 
 - (void) nextPage
 {
-    
+    currentPage++;
 }
 - (void) previousPage
 {
-    
+    currentPage--;
 }
 - (void) deletePage
 {
     
 }
-
 - (void) pauseRecording
 {
-    
+    [recording stop];
 }
 - (void) stopRecording
 {
-
+    [self save];
+    [recording stop];
+}
+- (void) playRecording
+{
+    [recording play];
 }
 
 - (void) save
 {
+    NSString *lString = [mNotesStore save];
+    NSString *lString2 = [mCanvasStore save];
     
+    NSString *lString3 = lString + lString2;
+    
+    SaveLocal *save = [[SaveLocal alloc]init];
+    
+    NSData* data = [lString dataUsingEncoding:NSUTF8StringEncoding];
+    [save write:data];
 }
 
 @end

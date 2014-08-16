@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol SaveMe <NSObject>
-
+-(id)init: (NSString*) aFile;
+-(NSNumber*)write: (NSData*) aText;
+-(NSData*)readAll;
+-(BOOL)delete;
 @end

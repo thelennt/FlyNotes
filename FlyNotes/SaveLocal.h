@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SaveMe.h"
+
 
 @interface SaveLocal : NSObject <SaveMe>
 {

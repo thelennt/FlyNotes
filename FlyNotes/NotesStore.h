@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NotesPage.h"
+#import "NoteEvent.h"
 
 @interface NotesStore : NSObject
 {
@@ -16,10 +17,10 @@
 }
 
 - (id) init;
-- (void) newNotesPage:(NSObject*)page;
+- (void) newNotesPage:(id)notepage;
 - (NSObject*) getNotesPage:(NSUInteger)page;
 - (void) removeNotesPage:(NSUInteger)page;
 - (NSUInteger) getPages;
-
-
+- (NSString*) save;
+- (void) addEvent:(id)note page:(NSUInteger)page
 @end

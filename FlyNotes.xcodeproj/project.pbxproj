@@ -50,8 +50,6 @@
 		A7ACC420176C0B0400191A86 /* StudyModeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */; };
 		A7ACC424176C0BCF00191A86 /* NotesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC423176C0BCF00191A86 /* NotesStore.m */; };
 		A7ACC425176C0BCF00191A86 /* NotesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC423176C0BCF00191A86 /* NotesStore.m */; };
-		A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
-		A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC427176C0BE200191A86 /* CanvasStore.m */; };
 		A7ACC42D1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
 		A7ACC42E1771405100191A86 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ACC42C1771405100191A86 /* Stack.m */; };
 		A7D0E368198412ED008B07A1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D0E367198412ED008B07A1 /* MainView.xib */; };
@@ -140,8 +138,6 @@
 		A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyModeEventHandler.m; sourceTree = "<group>"; };
 		A7ACC422176C0BCF00191A86 /* NotesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesStore.h; sourceTree = "<group>"; };
 		A7ACC423176C0BCF00191A86 /* NotesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesStore.m; sourceTree = "<group>"; };
-		A7ACC426176C0BE200191A86 /* CanvasStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasStore.h; sourceTree = "<group>"; };
-		A7ACC427176C0BE200191A86 /* CanvasStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasStore.m; sourceTree = "<group>"; };
 		A7ACC42B1771405100191A86 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		A7ACC42C1771405100191A86 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		A7D0E367198412ED008B07A1 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
@@ -374,8 +370,6 @@
 			children = (
 				A7ACC422176C0BCF00191A86 /* NotesStore.h */,
 				A7ACC423176C0BCF00191A86 /* NotesStore.m */,
-				A7ACC426176C0BE200191A86 /* CanvasStore.h */,
-				A7ACC427176C0BE200191A86 /* CanvasStore.m */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -533,7 +527,6 @@
 				A7ACC41B176C0AED00191A86 /* RecordModeEventHandler.m in Sources */,
 				A7ACC41F176C0B0400191A86 /* StudyModeEventHandler.m in Sources */,
 				A7ACC424176C0BCF00191A86 /* NotesStore.m in Sources */,
-				A7ACC428176C0BE200191A86 /* CanvasStore.m in Sources */,
 				A7ACC42D1771405100191A86 /* Stack.m in Sources */,
 				A7D0E36C198438BE008B07A1 /* MainUI.m in Sources */,
 				A7D0E375198B29E4008B07A1 /* Testing123ViewController.m in Sources */,
@@ -554,7 +547,6 @@
 				A7ACC41C176C0AED00191A86 /* RecordModeEventHandler.m in Sources */,
 				A7ACC420176C0B0400191A86 /* StudyModeEventHandler.m in Sources */,
 				A7ACC425176C0BCF00191A86 /* NotesStore.m in Sources */,
-				A7ACC429176C0BE200191A86 /* CanvasStore.m in Sources */,
 				A7ACC42E1771405100191A86 /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

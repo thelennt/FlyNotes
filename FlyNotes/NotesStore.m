@@ -15,12 +15,15 @@
 - (id) init
 {
     notes = [[NSMutableArray alloc] init];
+    return self;
 }
 
-- (void) newNotesPage:(NSObject*)page
+- (void) newNotesPage:(id)page
 {
-    [notes addObject:page];
-
+    if([page conformsToProtocol:@protocol(NotesPage)])
+    {
+        [notes addObject:page];
+    }
 }
     
 - (NSObject*) getNotesPage:(NSUInteger)page
@@ -40,10 +43,31 @@
     return [notes count];
 }
 
-- (void) addEvent:(NSObject*)note page:(NSUInteger)page
+- (void) addEvent:(id)note page:(NSUInteger)page
 {
+    if([note conformsToProtocol:@protocol(NotesPage)])
+    {
+        id <NotesPage> temp = note;
+        if([temp.type isEqualToString:@"TextNote"])
+            [[notes objectAtIndex:page] addTextEvent:(TextNoteEvent*)note] ;
+        if([temp.type isEqualToString:@"ScribbleNote"])
+            [[notes objectAtIndex:page] addTextEvent:(TextNoteEvent*)note] ;
+    }
+}
+
+- (NSString*) save
+{
+    NSMutableString *lString = [[NSMutableString alloc]init];
     
-    [[notes objectAtIndex:page] addTextEvent:(TextNoteEvent*)note] ;
+    for(id note in notes)
+    {
+        if([note conformsToProtocol:@protocol(NotesPage)])
+        {
+            id <NotesPage> temp = note;
+            [lString appendString: [temp NotesPageNode]];
+        }
+    }
+    return lString;
 }
 
 

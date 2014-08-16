@@ -19,7 +19,6 @@
     NSMutableArray* events;
     CGPoint* dimensions;
 }
--(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
 
 -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground;
 -(BOOL)changeBackground:(NSString*)abackground;

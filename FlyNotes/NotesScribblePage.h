@@ -16,6 +16,10 @@
     NSString* background;
     NSMutableArray* events;
     CGPoint* dimensions;
+    
+    NSMutableDictionary* xEvents;
+    NSMutableDictionary* yEvents;
+    NSMutableDictionary* timeEvents;
 }
 
 @end

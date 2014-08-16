@@ -23,7 +23,7 @@
 -(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground Dimensions:(CGPoint*)adimensions;
 -(BOOL)changeBackground:(NSString*)abackground;
 - (id)init:(NSDictionary*)dictionary;
-
+-(NSString*) NotesPageNode;
 
 @optional
 -(BOOL)addScribbleEvent:(ScribbleNoteEvent*)aevent;

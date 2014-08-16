@@ -17,13 +17,18 @@
 @interface RecordModeEventHandler : NSObject
 {
     NotesStore* mNotesStore;
-    CanvasStore* mCanvasStore;
+    NotesStore* mCanvasStore;
     NSObject* recording;
+    int currentPage;
+    int maxPage;
+    double recordingTime;
+    ScribbleStyle *currentStyle;
+    NSString* defaultBackground;
 }
-- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(NSObject*)recording;
+- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(id)recording;
 - (void) newPage;
 - (void) newStyle:(Style *)style;
-- (void) newEvent:(NSObject *) event;
+- (void) newEvent:(id) event;
 
 - (void) nextPage;
 - (void) previousPage;

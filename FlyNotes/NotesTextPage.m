@@ -17,11 +17,13 @@
 @synthesize events;
 @synthesize dimensions;
 
--(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground
+-(id)init: PageNumber:(NSNumber*)anumber Background:(NSString*)abackground
 {
     type = @"NotesTextPage";
     number = anumber;
     background = abackground;
+    
+
     return self;
 }
 
@@ -43,6 +45,15 @@
 {
     [events addObject:aevent];
     return true;
+}
+
+-(TextNoteEvent*)getEvent:(NSUInteger)event
+{
+    if(event< [events count])
+    {
+        return [events objectAtIndex: event];
+    }
+    return nil;
 }
 
 

@@ -6,9 +6,11 @@
 //  Copyright (c) 2013 Nathan Thelen. All rights reserved.
 //
 
+
 #import "NotesScribblePage.h"
 #import "ScribbleNoteEvent.h"
 #import "XMLWriter.h"
+
 
 @implementation NotesScribblePage
 @synthesize type;
@@ -17,11 +19,16 @@
 @synthesize events;
 @synthesize dimensions;
 
--(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground
+-(id)init: (NSNumber*)anumber Background:(NSString*)abackground
 {
     type = @"NotesScribblePage";
     number = anumber;
     background = abackground;
+    
+    xEvents = [[NSMutableDictionary alloc]init];
+    yEvents = [[NSMutableDictionary alloc]init];
+    timeEvents = [[NSMutableDictionary alloc]init];
+    
     return self;
 }
 
@@ -41,7 +48,79 @@
 -(BOOL)addEvent:(ScribbleNoteEvent*)aevent
 {
     [events addObject:aevent];
+    [timeEvents setObject:aevent forKey:[aevent timeStamp]];
+    [xEvents setObject:aevent forKey:[NSNumber numberWithInt:[aevent x]]];
+    [yEvents setObject:aevent forKey:[NSNumber numberWithInt:[aevent y]]];
     return true;
+}
+
+-(NSArray*)getTimeEvents:(int)value span:(int)span
+{
+    NSMutableArray* temp;
+    temp = [[NSMutableArray alloc]init];
+    for(int i=value-span;i<value+span;i++)
+    {
+        NSNumber *tnumber = [NSNumber numberWithInt:i];
+        if(timeEvents[tnumber] != nil)
+        {
+            [temp addObject:timeEvents[tnumber]];
+        }
+    }
+    return temp;
+}
+
+-(NSArray*)getLocationEvents:(NSUInteger)x y:(NSUInteger)y span:(NSUInteger)span
+{
+    NSMutableSet* xSet = [[NSMutableSet alloc]init];
+    NSMutableSet* ySet = [[NSMutableSet alloc]init];
+
+    for(NSUInteger i=x-span;i<x+span;i++)
+    {
+        NSNumber *tnumber = [NSNumber numberWithInt:i];
+        if(xEvents[tnumber] != nil)
+        {
+            [xSet addObject:xEvents[tnumber]];
+        }
+    }
+    
+    for(int i=y-span;i<y+span;i++)
+    {
+        NSNumber *tnumber = [NSNumber numberWithInt:i];
+        if(yEvents[tnumber] != nil)
+        {
+            [ySet addObject:yEvents[tnumber]];
+        }
+    }
+    
+    [xSet intersectSet:(NSSet *)ySet];
+    
+    NSArray *array = [xSet allObjects];
+    return array;
+}
+
+-(ScribbleNoteEvent*)getNearestEvent:(NSUInteger)x y:(NSUInteger)y span:(NSUInteger)span
+{
+    ScribbleNoteEvent* temp = nil;
+    
+    NSUInteger tempx;
+    NSUInteger tempy;
+    float tempclosest;
+    float closest = 99999;
+    
+    NSArray* array = [self getLocationEvents:(NSUInteger)x y:(NSUInteger)y span:(NSUInteger)span];
+    
+    for(ScribbleNoteEvent* s in array)
+    {
+        tempx = abs([s x] - x);
+        tempy = abs([s y] - y);
+        
+        tempclosest = sqrt(tempx*tempx + tempy*tempy);
+        if( tempclosest < closest)
+        {
+            closest = tempclosest;
+            temp = s;
+        }
+    }
 }
 
 

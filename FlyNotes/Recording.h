@@ -12,5 +12,7 @@
 @protocol Recording <NSObject>
 
 -(NSString*)createRecordingNode;
-
+- (IBAction)recordPauseTapped:(id)sender;
+- (IBAction)stopTapped:(id)sender;
+- (IBAction)playTapped:(id)sender;
 @end

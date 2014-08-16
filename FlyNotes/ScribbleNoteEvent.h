@@ -19,19 +19,21 @@
     NSString* type;
     NSNumber* timeStamp;
     NSMutableArray* locations;
-    CGPoint* location;
+    NSUInteger x;
+    NSUInteger y;
     ScribbleStyle* style;
 }
 
--(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle;
--(void)addPoint:(CGPoint*)apoint;
+-(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle x:(NSNumber*)lx t:(NSNumber*)ly;
+
 - (id)init:(NSDictionary*)dictionary;
 
-@property (readonly) NSMutableArray* locations;
 @property (readonly) ScribbleStyle* style;
 @property (readonly) NSNumber* objectid;
 @property (readonly) NSString* type;
 @property (readonly) NSNumber* timeStamp;
 @property (readonly) NSString* noteEventNode;
+@property (readonly) NSUInteger x;
+@property (readonly) NSUInteger y;
 
 @end

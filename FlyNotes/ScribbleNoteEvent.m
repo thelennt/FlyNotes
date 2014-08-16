@@ -14,15 +14,19 @@
 @synthesize type;
 @synthesize timeStamp;
 @synthesize style;
-@synthesize locations;
+@synthesize x;
+@synthesize y;
+
 
 XMLWriter* writer;
--(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle{
+-(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle x:(NSUInteger)lx t:(NSUInteger)ly
+{
     objectid = aid;
     timeStamp = atimeStamp;
     style = astyle;
     type = @"ScribbleNote";
-    locations = [[NSMutableArray alloc] init];
+    x = lx;
+    y = ly;
     
     return self;
 }
@@ -30,11 +34,13 @@ XMLWriter* writer;
 
 - (id)init:(NSDictionary*)dictionary
 {
+    x = dictionary[@"x"];
+    y = dictionary[@"y"];
     objectid = dictionary[@"objectid"];
     timeStamp = dictionary[@"timeStamp"];
     style = dictionary[@"style"];
     type = @"ScribbleNote";
-    locations = [[NSMutableArray alloc] init];
+
     return self;
 }
 
@@ -67,10 +73,5 @@ XMLWriter* writer;
     return [writer toString];
 }
 
--(void)addPoint:(CGPoint*)apoint
-{
-    [locations addObject:(__bridge id)apoint];
-    
-}
 
 @end
