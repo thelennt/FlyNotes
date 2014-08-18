@@ -70,5 +70,10 @@
     return lString;
 }
 
+- (NSString*) saveImage
+{
+        
+}
+
 
 @end

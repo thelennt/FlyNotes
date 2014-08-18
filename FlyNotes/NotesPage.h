@@ -20,7 +20,7 @@
 @property (readonly) NSString* NotesPageNode;
 @property (readonly) CGPoint* dimensions;
 
--(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground Dimensions:(CGPoint*)adimensions;
+-(id)init: (NSNumber*)anumber Background:(NSString*)abackground;
 -(BOOL)changeBackground:(NSString*)abackground;
 - (id)init:(NSDictionary*)dictionary;
 -(NSString*) NotesPageNode;

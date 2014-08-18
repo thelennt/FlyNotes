@@ -18,7 +18,7 @@
 {
     NotesStore* mNotesStore;
     NotesStore* mCanvasStore;
-    NSObject* recording;
+    id recording;
     int currentPage;
     int maxPage;
     double recordingTime;
@@ -27,7 +27,7 @@
 }
 - (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(id)recording;
 - (void) newPage;
-- (void) newStyle:(Style *)style;
+- (void) newStyle:(ScribbleStyle *)style;
 - (void) newEvent:(id) event;
 
 - (void) nextPage;

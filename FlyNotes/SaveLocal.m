@@ -50,5 +50,20 @@ NSFileManager *filemgr;
          mfile error: NULL]  == YES);
 }
 
+-(NSInteger) saveImage:(UIImage*)image filename:(NSString*)file
+{
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+      
+    if (![imageData writeToFile:file atomically:NO])
+    {
+        return -1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 
 @end

@@ -12,5 +12,6 @@
 -(id)init: (NSString*) aFile;
 -(NSNumber*)write: (NSData*) aText;
 -(NSData*)readAll;
+-(NSInteger) saveImage:(UIImage*)image filename:(NSString*)file;
 -(BOOL)delete;
 @end

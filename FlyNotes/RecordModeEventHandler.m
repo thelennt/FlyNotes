@@ -9,7 +9,7 @@
 #import "RecordModeEventHandler.h"
 #import "NotesPage.h"
 #import "NotesTextPage.h"
-#import "NotesCanvasPage.h"
+#import "NotesScribblePage.h"
 #import "Recording.h"
 #import "SaveLocal.h"
 
@@ -24,20 +24,21 @@
     recordingTime = 0;
     currentStyle = [[ScribbleStyle alloc]init];
     defaultBackground = lbackground;
+    return self;
 }
 - (void) newNotesPage
 {
-    NotesTextPage* temp = [[NotesTextPage alloc]init:[mNotesStore count] Background:defaultBackground];
+    NotesTextPage* temp = [[NotesTextPage alloc]init:[mNotesStore getPages] Background:defaultBackground];
     
     [mNotesStore newNotesPage:temp]:
 }
 - (void) newCanvasPage
 {
-    NotesCanvasPage* temp = [[NotesCanvasPage alloc]init:[mCanvasStore count] Background:defaultBackground];
+    NotesCanvasPage* temp = [[NotesCanvasPage alloc]init:[mCanvasStore getPages] Background:defaultBackground];
 
     [mCanvasStore newNotesPage:temp]:
 }
-- (void) newStyle:(Style *)style
+- (void) newStyle:(ScribbleStyle *)style
 {
     currentStyle = style;
 }
@@ -77,11 +78,11 @@
     NSString *lString = [mNotesStore save];
     NSString *lString2 = [mCanvasStore save];
     
-    NSString *lString3 = lString + lString2;
+    NSString *lString3 = [lString stringByAppendingString:lString2];
     
     SaveLocal *save = [[SaveLocal alloc]init];
     
-    NSData* data = [lString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData* data = [lString3 dataUsingEncoding:NSUTF8StringEncoding];
     [save write:data];
 }
 

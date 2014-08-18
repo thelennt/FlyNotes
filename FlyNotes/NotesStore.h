@@ -22,5 +22,5 @@
 - (void) removeNotesPage:(NSUInteger)page;
 - (NSUInteger) getPages;
 - (NSString*) save;
-- (void) addEvent:(id)note page:(NSUInteger)page
+- (void) addEvent:(id)note page:(NSUInteger)page;
 @end

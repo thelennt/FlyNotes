@@ -9,7 +9,7 @@
 #import "SaveDropBox.h"
 
 @implementation SaveDropBox
-
+/*
 @synthesize objDBSession,relinkUserId,apiCallDelegate;
 @synthesize objRestClient;
 @synthesize currentPostType;
@@ -28,7 +28,7 @@ static DropboxManager *singletonManager = nil;
 {
     if(!singletonManager)
         singletonManager = [[DropboxManager alloc] init];
-    
+ 
     return singletonManager;
 }
 
@@ -296,4 +296,5 @@ static DropboxManager *singletonManager = nil;
     if([apiCallDelegate respondsToSelector:@selector(getFolderContentFailed:)])
         [apiCallDelegate getFolderContentFailed:[error localizedDescription]];
 }
+ */
 @end

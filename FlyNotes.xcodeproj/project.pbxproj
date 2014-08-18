@@ -31,6 +31,10 @@
 		A7715B9219982FF9004B3A15 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7715B9019982FF9004B3A15 /* MainStoryboard_iPhone.storyboard */; };
 		A7715B9319982FF9004B3A15 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7715B9119982FF9004B3A15 /* MainStoryboard_iPad.storyboard */; };
 		A7715B96199C4CB0004B3A15 /* SaveLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = A7715B95199C4CB0004B3A15 /* SaveLocal.m */; };
+		A7715BA219A17EAA004B3A15 /* UIImage+PDF.m in Sources */ = {isa = PBXBuildFile; fileRef = A7715BA119A17EAA004B3A15 /* UIImage+PDF.m */; };
+		A7715BA519A17F0D004B3A15 /* UIView+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A7715BA419A17F0C004B3A15 /* UIView+Image.m */; };
+		A7715BA819A18094004B3A15 /* InitializeModeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A7715BA719A18094004B3A15 /* InitializeModeEventHandler.m */; };
+		A7715BAB19A18D59004B3A15 /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7715BAA19A18D59004B3A15 /* PDFView.m */; };
 		A78E981417EBC38300E31363 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E981317EBC38300E31363 /* AVFoundation.framework */; };
 		A78E981617F1063000E31363 /* ScribbleCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981517F1063000E31363 /* ScribbleCanvas.xib */; };
 		A78E981817F10C7000E31363 /* NoteCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78E981717F10C7000E31363 /* NoteCanvas.xib */; };
@@ -108,6 +112,14 @@
 		A7715B9119982FF9004B3A15 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		A7715B94199C4CAF004B3A15 /* SaveLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveLocal.h; sourceTree = "<group>"; };
 		A7715B95199C4CB0004B3A15 /* SaveLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveLocal.m; sourceTree = "<group>"; };
+		A7715BA019A17EAA004B3A15 /* UIImage+PDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDF.h"; sourceTree = "<group>"; };
+		A7715BA119A17EAA004B3A15 /* UIImage+PDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PDF.m"; sourceTree = "<group>"; };
+		A7715BA319A17F0C004B3A15 /* UIView+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Image.h"; sourceTree = "<group>"; };
+		A7715BA419A17F0C004B3A15 /* UIView+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Image.m"; sourceTree = "<group>"; };
+		A7715BA619A18094004B3A15 /* InitializeModeEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializeModeEventHandler.h; sourceTree = "<group>"; };
+		A7715BA719A18094004B3A15 /* InitializeModeEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializeModeEventHandler.m; sourceTree = "<group>"; };
+		A7715BA919A18D59004B3A15 /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
+		A7715BAA19A18D59004B3A15 /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
 		A78E981317EBC38300E31363 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A78E981517F1063000E31363 /* ScribbleCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScribbleCanvas.xib; sourceTree = "<group>"; };
 		A78E981717F10C7000E31363 /* NoteCanvas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCanvas.xib; sourceTree = "<group>"; };
@@ -361,6 +373,8 @@
 				A7ACC41A176C0AED00191A86 /* RecordModeEventHandler.m */,
 				A7ACC41D176C0B0400191A86 /* StudyModeEventHandler.h */,
 				A7ACC41E176C0B0400191A86 /* StudyModeEventHandler.m */,
+				A7715BA619A18094004B3A15 /* InitializeModeEventHandler.h */,
+				A7715BA719A18094004B3A15 /* InitializeModeEventHandler.m */,
 			);
 			name = EventHandlers;
 			sourceTree = "<group>";
@@ -377,8 +391,14 @@
 		A7ACC42A1771402F00191A86 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A7715BA319A17F0C004B3A15 /* UIView+Image.h */,
+				A7715BA419A17F0C004B3A15 /* UIView+Image.m */,
+				A7715BA019A17EAA004B3A15 /* UIImage+PDF.h */,
+				A7715BA119A17EAA004B3A15 /* UIImage+PDF.m */,
 				A7ACC42B1771405100191A86 /* Stack.h */,
 				A7ACC42C1771405100191A86 /* Stack.m */,
+				A7715BA919A18D59004B3A15 /* PDFView.h */,
+				A7715BAA19A18D59004B3A15 /* PDFView.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -535,6 +555,10 @@
 				A7997012198DA2CB004DC133 /* FlyNotesViewController.m in Sources */,
 				A7997014198DA306004DC133 /* main.m in Sources */,
 				A7715B96199C4CB0004B3A15 /* SaveLocal.m in Sources */,
+				A7715BA219A17EAA004B3A15 /* UIImage+PDF.m in Sources */,
+				A7715BA519A17F0D004B3A15 /* UIView+Image.m in Sources */,
+				A7715BA819A18094004B3A15 /* InitializeModeEventHandler.m in Sources */,
+				A7715BAB19A18D59004B3A15 /* PDFView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
