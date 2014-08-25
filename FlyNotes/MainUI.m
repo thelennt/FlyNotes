@@ -11,11 +11,15 @@
 @implementation MainUI
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+        RecordHandler: (RecordModeEventHandler*) record InitializeHandler: (InitializeModeEventHandler*) init
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
+    
+    recordHandler = record;
+    initHandler = init;
     return self;
 }
 
@@ -63,14 +67,17 @@
 - (IBAction)PreviousButtonPressed:(id)sender {
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
     
     mouseSwiped = NO;
     UITouch *touch = [touches anyObject];
     lastPoint = [touch locationInView:self.view];
+    
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
     
     mouseSwiped = YES;
     UITouch *touch = [touches anyObject];

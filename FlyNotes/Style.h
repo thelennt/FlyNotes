@@ -11,7 +11,7 @@
 @protocol Style <NSObject>
 
 @property (readonly) NSString* type;
-@property (readonly) NSNumber* identifier;
+@property (readonly) NSUInteger identifier;
 @property (readonly) NSString* styleNode;
 
 

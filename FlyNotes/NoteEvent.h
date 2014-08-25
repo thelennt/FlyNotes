@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol NoteEvent <NSObject>
-@property (readonly) NSNumber* objectid;
-@property (readonly) NSString* type;
-@property (readonly) NSNumber* timeStamp;
+@property (readonly) NSUInteger objectid;
+@property (readonly) NSString* eventType;
+@property (readonly) NSUInteger timeStamp;
 @property (readonly) NSString* noteEventNode;
 @end

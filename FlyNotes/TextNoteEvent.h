@@ -13,25 +13,25 @@
 @interface TextNoteEvent : NSObject <NoteEvent>
 {
 @protected
-    NSNumber* objectid;
-    NSString* type;
-    NSNumber* timeStamp;
+    NSUInteger objectid;
+    NSString* eventType;
+    NSUInteger timeStamp;
     NSMutableString* charText;
-    NSNumber* location;
+    NSUInteger location;
     NoteStyle* style;
 }
 
--(id)init: (NSNumber*)id TimeStamp:(NSNumber*)atimeStamp Style:(NoteStyle*)astyle Location:(NSNumber*)alocation;
+-(id)init: (NSUInteger)aid TimeStamp:(NSUInteger) atimeStamp Style:(NoteStyle*)astyle Location:(NSUInteger)alocation;
 -(void)addText:(NSString*)charText;
 - (id)init:(NSDictionary*)dictionary;
 
 
 @property (readonly) NSMutableString* charText;
-@property (readonly) NSNumber* location;
+@property (readonly) NSUInteger location;
 @property (readonly) NoteStyle* style;
-@property (readonly) NSNumber* objectid;
-@property (readonly) NSString* type;
-@property (readonly) NSNumber* timeStamp;
+@property (readonly) NSUInteger objectid;
+@property (readonly) NSString* eventType;
+@property (readonly) NSUInteger timeStamp;
 @property (readonly) NSString* noteEventNode;
 
 @end

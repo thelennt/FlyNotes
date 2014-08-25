@@ -11,9 +11,10 @@
 
 @interface InitializeModeEventHandler : NSObject
 {
-    
+    NSString* defaultImage;
 }
 
+@property (readonly) NSString* defaultImage;
 -(NSArray*) ConvertFromPDFToImage:(NSString*)file;
 -(UIImage*) SetDefaultImage:(NSString*)file;
 -(NSUInteger) GetPDFPages:(NSString*)file;

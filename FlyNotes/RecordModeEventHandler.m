@@ -1,4 +1,3 @@
-//
 //  RecordModeEventHandler.m
 //  FlyNotes
 //
@@ -12,6 +11,8 @@
 #import "NotesScribblePage.h"
 #import "Recording.h"
 #import "SaveLocal.h"
+#import "ScribbleNoteEvent.h"
+#import "TextNoteEvent.h"
 
 @implementation RecordModeEventHandler
 
@@ -22,55 +23,78 @@
     recording = lrecording;
     currentPage = 1;
     recordingTime = 0;
-    currentStyle = [[ScribbleStyle alloc]init];
     defaultBackground = lbackground;
+    currentStyle = [[ScribbleStyle alloc]init:0 color:@"Blue" depth:5];
+    StyleCount = 1;
+    NoteStyleCount=1;
     return self;
 }
 - (void) newNotesPage
 {
-    NotesTextPage* temp = [[NotesTextPage alloc]init:[mNotesStore getPages] Background:defaultBackground];
+    NotesTextPage* tempValue = [[NotesTextPage alloc] init:[mNotesStore getPages] Background:defaultBackground];
     
-    [mNotesStore newNotesPage:temp]:
+    [mNotesStore newNotesPage:tempValue];
 }
 - (void) newCanvasPage
 {
-    NotesCanvasPage* temp = [[NotesCanvasPage alloc]init:[mCanvasStore getPages] Background:defaultBackground];
+    NotesScribblePage* tempValue = [[NotesScribblePage alloc] init:[mCanvasStore getPages] Background:defaultBackground];
 
-    [mCanvasStore newNotesPage:temp]:
+    [mCanvasStore newNotesPage:tempValue];
 }
-- (void) newStyle:(ScribbleStyle *)style
+- (void) newCanvasStyle:(ScribbleStyle *)style
 {
     currentStyle = style;
+    StyleCount++;
+}
+- (void) newNoteStyle:(ScribbleStyle *)style
+{
+    currentNoteStyle = style;
+    NoteStyleCount++;
 }
 - (void) newEvent:(id) event
 {
-    [mNotesStore addEvent:event page:currentPage];
+    if([event conformsToProtocol:@protocol(NoteEvent)] && [[event eventType] isEqualToString:@"ScribbleNoteEvent"])
+    {
+        [mCanvasStore addEvent:event page:currentPage];
+    }
+    if([event conformsToProtocol:@protocol(NoteEvent)] && [[event eventType] isEqualToString:@"TextNoteEvent"])
+    {
+        [mNotesStore addEvent:event page:currentPage];
+    }
 }
 
 - (void) nextPage
 {
-    currentPage++;
+    if(currentPage < [mCanvasStore getPages])
+        currentPage++;
 }
 - (void) previousPage
 {
-    currentPage--;
+    if(currentPage > 1)
+        currentPage--;
 }
 - (void) deletePage
 {
-    
+    [mCanvasStore removeNotesPage:currentPage];
+    currentPage--;
 }
 - (void) pauseRecording
 {
-    [recording stop];
+    if([recording state] == STOPPED)
+        [recording stop];
 }
 - (void) stopRecording
 {
-    [self save];
-    [recording stop];
+    if([recording state] == PLAYING)
+    {
+        [self save];
+        [recording stop];
+    }
 }
 - (void) playRecording
 {
-    [recording play];
+    if([recording state] == STOPPED)
+        [recording play];
 }
 
 - (void) save

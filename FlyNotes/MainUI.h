@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecordModeEventHandler.h"
+#import "InitializeModeEventHandler.h"
+
 
 @interface MainUI : UIViewController
 {
@@ -15,7 +18,13 @@
     CGFloat opacity;
     BOOL mouseSwiped;
     CGFloat brush;
+    RecordModeEventHandler *recordHandler;
+    InitializeModeEventHandler *initHandler;
 }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+RecordHandler: (RecordModeEventHandler*) record InitializeHandler: (InitializeModeEventHandler*) init;
+
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 
 @property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;

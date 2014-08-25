@@ -11,12 +11,12 @@
 
 @interface NoteStyle : NSObject <Style>
 
-- (id)init:(NSNumber*)aid bold:(NSNumber*)abold italic:(NSNumber*)aitalic underline:(NSNumber*)aunderline font:(NSNumber*)afont;
+- (id)init:(NSNumber*)aid bold:(NSUInteger)abold italic:(NSUInteger)aitalic underline:(NSUInteger)aunderline font:(NSNumber*)afont;
 - (id)init:(NSDictionary*)dictionary;
 
-@property (readonly) NSNumber* bold;
-@property (readonly) NSNumber* italic;
-@property (readonly) NSNumber* underline;
+@property (readonly) NSUInteger bold;
+@property (readonly) NSUInteger italic;
+@property (readonly) NSUInteger underline;
 @property (readonly) NSString* font;
 
 @end

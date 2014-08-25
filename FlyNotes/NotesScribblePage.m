@@ -19,7 +19,7 @@
 @synthesize events;
 @synthesize dimensions;
 
--(id)init: (NSNumber*)anumber Background:(NSString*)abackground
+-(id)init: (NSUInteger)anumber Background:(NSString*)abackground
 {
     type = @"NotesScribblePage";
     number = anumber;
@@ -35,7 +35,7 @@
 - (id)init:(NSDictionary*)dictionary
 {
     type = @"NotesScribblePage";
-    number = dictionary[@"number"];
+    number = [dictionary[@"number"] intValue];;
     background = dictionary[@"background"];
     return self;
 }
@@ -48,7 +48,7 @@
 -(BOOL)addEvent:(ScribbleNoteEvent*)aevent
 {
     [events addObject:aevent];
-    [timeEvents setObject:aevent forKey:[aevent timeStamp]];
+    [timeEvents setObject:aevent forKey:[NSNumber numberWithInt:[aevent timeStamp]]];
     [xEvents setObject:aevent forKey:[NSNumber numberWithInt:[aevent x]]];
     [yEvents setObject:aevent forKey:[NSNumber numberWithInt:[aevent y]]];
     return true;
@@ -121,6 +121,7 @@
             temp = s;
         }
     }
+    return temp;
 }
 
 
@@ -130,7 +131,8 @@
     
     [writer writeStartElement:@"NotesScribblePage"];
     [writer writeAttribute:@"type" value:type];
-    [writer writeAttribute:@"number" value:[number stringValue]];
+    [writer writeAttribute:@"number" value:[NSString stringWithFormat:@"%lu", (unsigned long)number]];
+
     [writer writeAttribute:@"background" value:background];
     [writer writeAttribute:@"type" value:type];
     [writer write:[self eventNode]];

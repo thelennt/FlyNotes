@@ -21,6 +21,7 @@ NSFileManager *filemgr;
         NSLog (@"File is writable");
     else
         NSLog (@"File is read only");
+    return self;
 }
 
 -(NSNumber*)write: (NSData*) aText
@@ -36,6 +37,7 @@ NSFileManager *filemgr;
 
     [file writeData: data];
     [file closeFile];
+    return 0;
 }
 
 -(NSData*)readAll
@@ -48,6 +50,7 @@ NSFileManager *filemgr;
 
     if ([filemgr removeItemAtPath:
          mfile error: NULL]  == YES);
+    return true;
 }
 
 -(NSInteger) saveImage:(UIImage*)image filename:(NSString*)file

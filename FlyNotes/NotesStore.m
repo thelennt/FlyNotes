@@ -45,12 +45,12 @@
 
 - (void) addEvent:(id)note page:(NSUInteger)page
 {
-    if([note conformsToProtocol:@protocol(NotesPage)])
+    if([note conformsToProtocol:@protocol(NoteEvent)])
     {
-        id <NotesPage> temp = note;
-        if([temp.type isEqualToString:@"TextNote"])
+        id <NoteEvent> temp = note;
+        if([temp.eventType isEqualToString:@"TextNote"])
             [[notes objectAtIndex:page] addTextEvent:(TextNoteEvent*)note] ;
-        if([temp.type isEqualToString:@"ScribbleNote"])
+        if([temp.eventType isEqualToString:@"ScribbleNote"])
             [[notes objectAtIndex:page] addTextEvent:(TextNoteEvent*)note] ;
     }
 }

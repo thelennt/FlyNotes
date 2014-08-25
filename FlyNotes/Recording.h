@@ -11,8 +11,16 @@
 
 @protocol Recording <NSObject>
 
+typedef enum RecordState : NSUInteger {
+    PLAYING,
+    STOPPED,
+    PAUSED
+} RecordState;
+
 -(NSString*)createRecordingNode;
 - (IBAction)recordPauseTapped:(id)sender;
 - (IBAction)stopTapped:(id)sender;
 - (IBAction)playTapped:(id)sender;
+
+- (void)play;
 @end

@@ -14,13 +14,13 @@
 @protocol NotesPage <NSObject>
 
 @property (readonly) NSString* type;
-@property (readonly) NSNumber* number;
+@property (readonly) NSUInteger number;
 @property (readonly) NSString* background;
 @property (readonly) NSMutableArray* events;
 @property (readonly) NSString* NotesPageNode;
 @property (readonly) CGPoint* dimensions;
 
--(id)init: (NSNumber*)anumber Background:(NSString*)abackground;
+-(id)init: (NSUInteger)anumber Background:(NSString*)abackground;
 -(BOOL)changeBackground:(NSString*)abackground;
 - (id)init:(NSDictionary*)dictionary;
 -(NSString*) NotesPageNode;

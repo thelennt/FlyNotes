@@ -23,9 +23,12 @@
     int maxPage;
     double recordingTime;
     ScribbleStyle *currentStyle;
+    int StyleCount;
+    NoteStyle *currentNoteStyle;
+    int NoteStyleCount;
     NSString* defaultBackground;
 }
-- (id) init:(NotesStore*)store canvasStore:(CanvasStore*)canvas recording:(id)recording;
+- (id) init:(NotesStore*)store canvasStore:(NotesStore*)canvas recording:(id)recording;
 - (void) newPage;
 - (void) newStyle:(ScribbleStyle *)style;
 - (void) newEvent:(id) event;

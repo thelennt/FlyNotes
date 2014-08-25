@@ -14,18 +14,18 @@
 @protected
     
     NSString* type;
-    NSNumber* number;
+    NSUInteger number;
     NSString* background;
     NSMutableArray* events;
     CGPoint* dimensions;
 }
 
--(id)init: (NSString*)atype PageNumber:(NSNumber*)anumber Background:(NSString*)abackground;
+-(id)init: (NSUInteger)anumber Background:(NSString*)abackground;
 -(BOOL)changeBackground:(NSString*)abackground;
 -(BOOL)addEvent:(TextNoteEvent*)aevent;
 
 @property (readonly) NSString* type;
-@property (readonly) NSNumber* number;
+@property (readonly) NSUInteger number;
 @property (readonly) NSString* background;
 @property (readonly) NSMutableArray* events;
 @property (readonly) NSString* NotesPageNode;

@@ -15,23 +15,23 @@
 @interface ScribbleNoteEvent : NSObject <NoteEvent>
 {
 @protected
-    NSNumber* objectid;
-    NSString* type;
-    NSNumber* timeStamp;
+    NSUInteger objectid;
+    NSString* eventType;
+    NSUInteger timeStamp;
     NSMutableArray* locations;
     NSUInteger x;
     NSUInteger y;
     ScribbleStyle* style;
 }
 
--(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(ScribbleStyle*)astyle x:(NSNumber*)lx t:(NSNumber*)ly;
+-(id)init: (NSUInteger)aid TimeStamp:(NSUInteger)atimeStamp Style:(ScribbleStyle*)astyle x:(NSUInteger)lx t:(NSUInteger)ly;
 
 - (id)init:(NSDictionary*)dictionary;
 
 @property (readonly) ScribbleStyle* style;
-@property (readonly) NSNumber* objectid;
-@property (readonly) NSString* type;
-@property (readonly) NSNumber* timeStamp;
+@property (readonly) NSUInteger objectid;
+@property (readonly) NSString* eventType;
+@property (readonly) NSUInteger timeStamp;
 @property (readonly) NSString* noteEventNode;
 @property (readonly) NSUInteger x;
 @property (readonly) NSUInteger y;

@@ -13,15 +13,15 @@
 {
 @protected
     NSString* type;
-    NSNumber* identifier;
+    NSUInteger identifier;
     NSString* color;
-    NSNumber* depth;
+    NSUInteger depth;
 }
 
-- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth;
+- (id)init:(NSUInteger)aid color:(NSString*)acolor depth:(NSUInteger)adepth;
 - (id)init:(NSDictionary*)dictionary;
 
 @property (readonly) NSString* color;
-@property (readonly) NSNumber* depth;
+@property (readonly) NSUInteger depth;
 
 @end

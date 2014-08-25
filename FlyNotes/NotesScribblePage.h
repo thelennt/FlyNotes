@@ -12,7 +12,7 @@
 {
     @protected
     NSString* type;
-    NSNumber* number;
+    NSUInteger number;
     NSString* background;
     NSMutableArray* events;
     CGPoint* dimensions;
@@ -21,5 +21,6 @@
     NSMutableDictionary* yEvents;
     NSMutableDictionary* timeEvents;
 }
-
+-(id)init: (NSUInteger)anumber Background:(NSString*)abackground;
+- (id)init:(NSDictionary*)dictionary;
 @end

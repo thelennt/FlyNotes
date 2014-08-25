@@ -11,30 +11,30 @@
 
 @implementation TextNoteEvent
 @synthesize objectid;
-@synthesize type;
+@synthesize eventType;
 @synthesize location;
 @synthesize timeStamp;
 @synthesize style;
 @synthesize charText;
 
 
--(id)init: (NSNumber*)aid TimeStamp:(NSNumber*)atimeStamp Style:(NoteStyle*)astyle Location:(NSNumber*)alocation
+-(id)init: (NSUInteger)aid TimeStamp:(NSUInteger) atimeStamp Style:(NoteStyle*)astyle Location:(NSUInteger)alocation
 {
     objectid = aid;
     timeStamp = atimeStamp;
     style = astyle;
-    type = @"TextNote";
+    eventType = @"TextNote";
     location = alocation;
     return self;
 }
 
 - (id)init:(NSDictionary*)dictionary
 {
-    objectid = dictionary[@"objectid"];
-    timeStamp = dictionary[@"timeStamp"];;
+    objectid = [dictionary[@"objectid"] intValue];
+    timeStamp = [dictionary[@"timeStamp"] intValue];
     style = dictionary[@"style"];;
-    type = @"TextNote";
-    location = dictionary[@"location"];;
+    eventType = @"TextNote";
+    location = [dictionary[@"location"] intValue];
     return self;
 }
 
@@ -43,11 +43,11 @@
 {
     XMLWriter *writer = [[XMLWriter alloc] init];
     
-    [writer writeStartElement:type];
-    [writer writeAttribute:@"location" value:[location stringValue]];
-    [writer writeAttribute:@"style" value:[[style identifier] stringValue]];
-    [writer writeAttribute:@"objectid" value:[objectid stringValue]];
-    [writer writeAttribute:@"timeStamp" value:[timeStamp stringValue]];
+    [writer writeStartElement:eventType];
+    [writer writeAttribute:@"location" value:[NSString stringWithFormat:@"%lu", (unsigned long)location]];
+    [writer writeAttribute:@"style" value:[NSString stringWithFormat:@"%lu", (unsigned long)[style identifier]]];
+    [writer writeAttribute:@"objectid" value:[NSString stringWithFormat:@"%lu", (unsigned long)objectid]];
+    [writer writeAttribute:@"timeStamp" value:[NSString stringWithFormat:@"%lu", (unsigned long)timeStamp]];
     [writer writeAttribute:@"text" value:charText];
     
     [writer writeEndElement];

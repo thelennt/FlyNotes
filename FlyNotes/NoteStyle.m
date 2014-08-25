@@ -17,7 +17,7 @@
 @synthesize underline;
 @synthesize font;
 
-- (id)init:(NSNumber*)aid bold:(NSNumber*)abold italic:(NSNumber*)aitalic underline:(NSNumber*)aunderline font:(NSString*)afont
+- (id)init:(NSUInteger)aid bold:(NSUInteger)abold italic:(NSUInteger)aitalic underline:(NSUInteger)aunderline font:(NSString*)afont
 {
     type = @"NoteStyle";
     identifier = aid;
@@ -31,10 +31,10 @@
 - (id)init:(NSDictionary*)dictionary
 {
     type = @"NoteStyle";
-    identifier = dictionary[@"identifier"];
-    bold = dictionary[@"bold"];
-    italic = dictionary[@"italic"];
-    underline = dictionary[@"underline"];
+    identifier = [dictionary[@"identifier"] intValue];
+    bold = [dictionary[@"bold"] intValue];
+    italic = [dictionary[@"italic"] intValue];
+    underline = [dictionary[@"underline"] intValue];
     font = dictionary[@"font"];
     return self;
 }
@@ -44,10 +44,10 @@
     XMLWriter *writer = [[XMLWriter alloc] init];
     
     [writer writeStartElement:type];
-    [writer writeAttribute:@"identifier" value:[identifier stringValue]];
-    [writer writeAttribute:@"bold" value:[bold stringValue]];
-    [writer writeAttribute:@"italic" value:[italic stringValue]];
-    [writer writeAttribute:@"underline" value:[underline stringValue]];
+    [writer writeAttribute:@"identifier" value:[NSString stringWithFormat:@"%lu", (unsigned long)identifier]];;
+    [writer writeAttribute:@"bold" value:[NSString stringWithFormat:@"%lu", (unsigned long)bold]];;
+    [writer writeAttribute:@"italic" value:[NSString stringWithFormat:@"%lu", (unsigned long)italic]];;
+    [writer writeAttribute:@"underline" value:[NSString stringWithFormat:@"%lu", (unsigned long)underline]];
     [writer writeAttribute:@"font" value:font];
     [writer writeEndElement];
     return [writer toString];

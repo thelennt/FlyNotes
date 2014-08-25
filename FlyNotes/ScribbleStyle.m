@@ -16,7 +16,7 @@
 @synthesize color;
 @synthesize depth;
 
-- (id)init:(NSNumber*)aid color:(NSString*)acolor depth:(NSNumber*)adepth
+- (id)init:(NSUInteger)aid color:(NSString*)acolor depth:(NSUInteger)adepth
 {
     type = @"ScribbleStyle";
     color = acolor;
@@ -29,9 +29,9 @@
 {
     
     type = @"ScribbleStyle";
-    color = dictionary[@"color"];;
-    depth = dictionary[@"depth"];;
-    identifier = dictionary[@"identifier"];;
+    color = dictionary[@"color"];
+    depth = [dictionary[@"depth"] intValue];
+    identifier = [dictionary[@"identifier"] intValue];
     return self;
 }
 
@@ -41,8 +41,8 @@
     
     [writer writeStartElement:type];
     [writer writeAttribute:@"color" value:color];
-    [writer writeAttribute:@"depth" value:[depth stringValue]];
-    [writer writeAttribute:@"identifier" value:[identifier stringValue]];
+    [writer writeAttribute:@"depth" value:[NSString stringWithFormat:@"%lu", (unsigned long)depth]];
+    [writer writeAttribute:@"identifier" value:[NSString stringWithFormat:@"%lu", (unsigned long)identifier]];
     [writer writeAttribute:@"type" value:type]; 
     [writer writeEndElement];
 
