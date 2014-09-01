@@ -13,14 +13,18 @@
     @protected
     NSString* type;
     NSUInteger number;
-    NSString* background;
+    NSURL* background;
     NSMutableArray* events;
     CGPoint* dimensions;
     
     NSMutableDictionary* xEvents;
     NSMutableDictionary* yEvents;
     NSMutableDictionary* timeEvents;
+    
+    UIImage* backgroundImage;
 }
--(id)init: (NSUInteger)anumber Background:(NSString*)abackground;
+-(id)init: (NSUInteger)anumber Background:(NSURL*)abackground;
 - (id)init:(NSDictionary*)dictionary;
+
+@property (readonly) UIImage* backgroundImage;
 @end

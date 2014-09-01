@@ -21,19 +21,21 @@
     NSMutableArray* locations;
     NSUInteger x;
     NSUInteger y;
-    ScribbleStyle* style;
+    NSUInteger style;
+    bool newSelect;
 }
 
--(id)init: (NSUInteger)aid TimeStamp:(NSUInteger)atimeStamp Style:(ScribbleStyle*)astyle x:(NSUInteger)lx t:(NSUInteger)ly;
+-(id)init: (NSUInteger)aid TimeStamp:(NSTimeInterval)atimeStamp Style:(NSUInteger)astyle x:(NSUInteger)lx y:(NSUInteger)ly newSelect:(bool)anew;
 
 - (id)init:(NSDictionary*)dictionary;
 
-@property (readonly) ScribbleStyle* style;
+@property (readonly) NSUInteger style;
 @property (readonly) NSUInteger objectid;
 @property (readonly) NSString* eventType;
 @property (readonly) NSUInteger timeStamp;
 @property (readonly) NSString* noteEventNode;
 @property (readonly) NSUInteger x;
 @property (readonly) NSUInteger y;
+@property (readonly) bool newSelect;
 
 @end

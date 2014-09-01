@@ -28,7 +28,7 @@
     NSUInteger pageCount = [self GetPDFPages:file];
     for(NSUInteger i=0;i<pageCount;i++)
     {
-        UIImage *img = [ UIImage imageWithPDFNamed:file atHeight:90 ];
+        UIImage *img = [ UIImage imageWithPDFURL:[NSURL URLWithString:file] atHeight:500 atPage:i+1];
         [temp addObject:img];
     }
 
@@ -38,15 +38,15 @@
 -(UIImage*) SetDefaultImage:(NSString*)file
 {
     defaultImage = file;
-    return [ UIImage imageWithPDFNamed:file atHeight:90 ];
+    return [ UIImage imageWithPDFNamed:file atHeight:1000 ];
 }
 
 -(NSUInteger) GetPDFPages:(NSString*)file
 {
-
-    NSURL *pdfURL = [[NSBundle mainBundle] URLForResource:file withExtension:nil];
-    CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((__bridge CFURLRef)pdfURL);
-    NSUInteger pageCount = CGPDFDocumentGetNumberOfPages(pdf);
+    CFStringRef fullPathEscaped = CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)file, NULL, NULL,kCFStringEncodingUTF8);
+    CFURLRef url = CFURLCreateWithString(NULL, (CFStringRef)(fullPathEscaped), NULL);
+    CGPDFDocumentRef SourcePDFDocument = CGPDFDocumentCreateWithURL(url);
+    NSUInteger pageCount = CGPDFDocumentGetNumberOfPages(SourcePDFDocument);
     return pageCount;
 }
 
@@ -56,11 +56,15 @@
     
     for(UIImage *temp2 in pages)
     {
-        NSMutableString* tempString = [NSString stringWithFormat:@"%d",[temp getPages]];
-     
-        [tempString appendString:@"png"];
-        [save saveImage:temp2 filename:tempString];
-        [temp newNotesPage:[[NotesScribblePage alloc]init:[NSNumber numberWithInt:[temp getPages] ] Background:tempString]];
+        NSString *documentsDirectory = [NSHomeDirectory()
+                                        stringByAppendingPathComponent:@"Documents"];
+
+        NSString* tempString1 =[NSString stringWithFormat:@"/Image%d.png",[temp getPages]];                   
+        NSString* tempString2 = [documentsDirectory stringByAppendingPathComponent:tempString1];
+        
+        [save saveImage:temp2 filename:tempString2];
+        
+        [temp newNotesPage:[[NotesScribblePage alloc]init:[temp getPages] Background:[NSURL fileURLWithPath:tempString2]]];
     }
     return temp;
 }

@@ -18,9 +18,9 @@ typedef enum RecordState : NSUInteger {
 } RecordState;
 
 -(NSString*)createRecordingNode;
-- (IBAction)recordPauseTapped:(id)sender;
-- (IBAction)stopTapped:(id)sender;
-- (IBAction)playTapped:(id)sender;
+- (IBAction)recordPause:(id)sender;
+- (IBAction)stop:(id)sender;
+- (IBAction)play:(NSTimeInterval) thisTime;
 
-- (void)play;
+- (IBAction)play;
 @end

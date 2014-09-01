@@ -20,12 +20,22 @@
     CGFloat brush;
     RecordModeEventHandler *recordHandler;
     InitializeModeEventHandler *initHandler;
+    int canvasCounter;
+    int currentStyle;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-RecordHandler: (RecordModeEventHandler*) record InitializeHandler: (InitializeModeEventHandler*) init;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+//RecordHandler: (RecordModeEventHandler*) record InitializeHandler: (InitializeModeEventHandler*) init;
+- (void) addEvent:(NSSet *)touches isNew:(bool)isNew;
+//@property (strong, nonatomic) IBOutlet UIView *MainInterfaceView;
+
+
+- (IBAction)PlayButton:(id)sender;
+- (void)addHandlers:(RecordModeEventHandler*) record InitializeHandler: (InitializeModeEventHandler*) init;
+- (void) activateEvent:(id)event;
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+- (IBAction)ButtonPressed:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;
 

@@ -74,6 +74,19 @@
 {
         
 }
+- (void) addStyle:(id)style
+{
+    [styles addObject:style];
+}
 
+- (NSUInteger) getStyleCount
+{
+    return [styles count];
+}
+
+- (UIImage*) getBackground:(NSUInteger) currentPage;
+{
+    return [[notes objectAtIndex:currentPage] backgroundImage];
+}
 
 @end

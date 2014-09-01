@@ -13,6 +13,7 @@
 @interface NotesStore : NSObject
 {
     NSMutableArray* notes;
+    NSMutableArray* styles;
     
 }
 
@@ -23,4 +24,6 @@
 - (NSUInteger) getPages;
 - (NSString*) save;
 - (void) addEvent:(id)note page:(NSUInteger)page;
+- (void) addStyle:(id)style;
+- (UIImage*) getBackground:(NSUInteger) currentPage;
 @end

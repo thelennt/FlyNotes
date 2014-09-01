@@ -15,7 +15,7 @@
 
 @property (readonly) NSString* type;
 @property (readonly) NSUInteger number;
-@property (readonly) NSString* background;
+@property (readonly) NSURL* background;
 @property (readonly) NSMutableArray* events;
 @property (readonly) NSString* NotesPageNode;
 @property (readonly) CGPoint* dimensions;

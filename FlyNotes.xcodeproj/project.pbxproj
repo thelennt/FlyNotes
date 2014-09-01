@@ -27,6 +27,11 @@
 		A7145EB7174DA2DE0051C1A1 /* NotesWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7145EB6174DA2DE0051C1A1 /* NotesWriter.m */; };
 		A73A03E1174EEE3400AD3CF3 /* SaveDropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */; };
 		A73A048C174EEFF800AD3CF3 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */; };
+		A745C1C119AAB9B6001F3B36 /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A745C1BE19AAB9B5001F3B36 /* NSData+MD5.m */; };
+		A745C1C219AAB9B6001F3B36 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A745C1C019AAB9B5001F3B36 /* NSString+MD5.m */; };
+		A745C21619AEB0D3001F3B36 /* InitializationUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A745C21519AEB0D3001F3B36 /* InitializationUIViewController.m */; };
+		A745C21919AEB0F3001F3B36 /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A745C21819AEB0F3001F3B36 /* StyleViewController.m */; };
+		A745C21C19AEB106001F3B36 /* TextTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A745C21B19AEB106001F3B36 /* TextTypeController.m */; };
 		A7484CED198C891E003427CC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7484CEC198C891E003427CC /* TestView.m */; };
 		A7715B9219982FF9004B3A15 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7715B9019982FF9004B3A15 /* MainStoryboard_iPhone.storyboard */; };
 		A7715B9319982FF9004B3A15 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7715B9119982FF9004B3A15 /* MainStoryboard_iPad.storyboard */; };
@@ -106,6 +111,16 @@
 		A73A03DF174EEE3400AD3CF3 /* SaveDropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDropBox.h; sourceTree = "<group>"; };
 		A73A03E0174EEE3400AD3CF3 /* SaveDropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDropBox.m; sourceTree = "<group>"; };
 		A73A044D174EEFF700AD3CF3 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
+		A745C1BE19AAB9B5001F3B36 /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
+		A745C1BF19AAB9B5001F3B36 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		A745C1C019AAB9B5001F3B36 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		A745C1C319AABA9B001F3B36 /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		A745C21419AEB0D2001F3B36 /* InitializationUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializationUIViewController.h; sourceTree = "<group>"; };
+		A745C21519AEB0D3001F3B36 /* InitializationUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationUIViewController.m; sourceTree = "<group>"; };
+		A745C21719AEB0F2001F3B36 /* StyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleViewController.h; sourceTree = "<group>"; };
+		A745C21819AEB0F3001F3B36 /* StyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleViewController.m; sourceTree = "<group>"; };
+		A745C21A19AEB106001F3B36 /* TextTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTypeController.h; sourceTree = "<group>"; };
+		A745C21B19AEB106001F3B36 /* TextTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTypeController.m; sourceTree = "<group>"; };
 		A7484CEB198C891E003427CC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		A7484CEC198C891E003427CC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		A7715B9019982FF9004B3A15 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -391,6 +406,10 @@
 		A7ACC42A1771402F00191A86 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A745C1C319AABA9B001F3B36 /* NSData+MD5.h */,
+				A745C1BE19AAB9B5001F3B36 /* NSData+MD5.m */,
+				A745C1BF19AAB9B5001F3B36 /* NSString+MD5.h */,
+				A745C1C019AAB9B5001F3B36 /* NSString+MD5.m */,
 				A7715BA319A17F0C004B3A15 /* UIView+Image.h */,
 				A7715BA419A17F0C004B3A15 /* UIView+Image.m */,
 				A7715BA019A17EAA004B3A15 /* UIImage+PDF.h */,
@@ -412,6 +431,12 @@
 				A7D0E374198B29E4008B07A1 /* Testing123ViewController.m */,
 				A7484CEB198C891E003427CC /* TestView.h */,
 				A7484CEC198C891E003427CC /* TestView.m */,
+				A745C21419AEB0D2001F3B36 /* InitializationUIViewController.h */,
+				A745C21519AEB0D3001F3B36 /* InitializationUIViewController.m */,
+				A745C21719AEB0F2001F3B36 /* StyleViewController.h */,
+				A745C21819AEB0F3001F3B36 /* StyleViewController.m */,
+				A745C21A19AEB106001F3B36 /* TextTypeController.h */,
+				A745C21B19AEB106001F3B36 /* TextTypeController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -559,6 +584,11 @@
 				A7715BA519A17F0D004B3A15 /* UIView+Image.m in Sources */,
 				A7715BA819A18094004B3A15 /* InitializeModeEventHandler.m in Sources */,
 				A7715BAB19A18D59004B3A15 /* PDFView.m in Sources */,
+				A745C1C119AAB9B6001F3B36 /* NSData+MD5.m in Sources */,
+				A745C1C219AAB9B6001F3B36 /* NSString+MD5.m in Sources */,
+				A745C21619AEB0D3001F3B36 /* InitializationUIViewController.m in Sources */,
+				A745C21919AEB0F3001F3B36 /* StyleViewController.m in Sources */,
+				A745C21C19AEB106001F3B36 /* TextTypeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,18 +15,18 @@
     
     NSString* type;
     NSUInteger number;
-    NSString* background;
+    NSURL* background;
     NSMutableArray* events;
     CGPoint* dimensions;
 }
 
--(id)init: (NSUInteger)anumber Background:(NSString*)abackground;
--(BOOL)changeBackground:(NSString*)abackground;
+-(id)init: (NSUInteger)anumber Background:(NSURL*)abackground;
+-(BOOL)changeBackground:(NSURL*)abackground;
 -(BOOL)addEvent:(TextNoteEvent*)aevent;
 
 @property (readonly) NSString* type;
 @property (readonly) NSUInteger number;
-@property (readonly) NSString* background;
+@property (readonly) NSURL* background;
 @property (readonly) NSMutableArray* events;
 @property (readonly) NSString* NotesPageNode;
 

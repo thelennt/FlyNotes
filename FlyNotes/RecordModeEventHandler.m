@@ -16,7 +16,7 @@
 
 @implementation RecordModeEventHandler
 
-- (id) init:(NotesStore*)lstore canvasStore:(NotesStore*)lcanvas recording:(id)lrecording background:(NSString*)lbackground
+- (id) init:(NotesStore*)lstore canvasStore:(NotesStore*)lcanvas recording:(id)lrecording background:(NSURL*)lbackground
 {
     mNotesStore = lstore;
     mCanvasStore = lcanvas;
@@ -93,8 +93,20 @@
 }
 - (void) playRecording
 {
-    if([recording state] == STOPPED)
+    //if([recording state] == STOPPED)
         [recording play];
+}
+
+- (NSTimeInterval) getTime
+{
+    //if([recording state] == STOPPED)
+    return [recording getTime];
+}
+
+- (NSTimeInterval) updateImage
+{
+    //if([recording state] == STOPPED)
+    
 }
 
 - (void) save
@@ -108,6 +120,11 @@
     
     NSData* data = [lString3 dataUsingEncoding:NSUTF8StringEncoding];
     [save write:data];
+}
+
+- (UIImage*) getCurrentImage
+{
+    return [mCanvasStore getBackground:currentPage];
 }
 
 @end

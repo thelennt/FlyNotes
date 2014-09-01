@@ -16,9 +16,11 @@
 {
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
+    NSUInteger state;
 }
 - (IBAction)recordPauseTapped:(id)sender;
 - (IBAction)stopTapped:(id)sender;
 - (IBAction)playTapped:(id)sender;
-
+- (NSTimeInterval)getTime;
+@property (readonly) NSUInteger state;
 @end

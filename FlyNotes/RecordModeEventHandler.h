@@ -26,9 +26,10 @@
     int StyleCount;
     NoteStyle *currentNoteStyle;
     int NoteStyleCount;
-    NSString* defaultBackground;
+    NSURL* defaultBackground;
+    
 }
-- (id) init:(NotesStore*)store canvasStore:(NotesStore*)canvas recording:(id)recording;
+- (id) init:(NotesStore*)lstore canvasStore:(NotesStore*)lcanvas recording:(id)lrecording background:(NSURL*)lbackground;
 - (void) newPage;
 - (void) newStyle:(ScribbleStyle *)style;
 - (void) newEvent:(id) event;
@@ -37,8 +38,11 @@
 - (void) previousPage;
 - (void) deletePage;
 
+- (UIImage*) getCurrentImage;
+
 - (void) pauseRecording;
 - (void) stopRecording;
-
+- (void) playRecording;
 - (void) save;
+- (NSTimeInterval) getTime;
 @end

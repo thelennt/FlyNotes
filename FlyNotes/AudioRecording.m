@@ -15,16 +15,17 @@
 
 @implementation AudioRecording
 
+@synthesize state;
 
 - (id)init
 {
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"MyAudioMemo.m4a",
+                               @"cheeseburger.m4a",
                                nil];
-    NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
-    
+    NSURL *outputFileURL = [NSURL URLWithString:@"file://localhost/Users/thelenn1/Desktop/FlyNotes/FlyNotes/cheeseburger.m4a"];
+    /*
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
@@ -38,9 +39,18 @@
     
     // Initiate and prepare the recorder
     recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:NULL];
-    recorder.delegate = self;
+    //recorder.delegate = self;
     recorder.meteringEnabled = YES;
     [recorder prepareToRecord];
+    state = PAUSED;
+     */
+    NSError *error = nil;
+   player = [[AVAudioPlayer alloc] initWithContentsOfURL:outputFileURL error:&error];
+    player.numberOfLoops = 1;
+    //[player setDelegate:self];
+    [player play];
+
+    return self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,12 +88,21 @@
     [audioSession setActive:NO error:nil];
 }
 
+
+
 - (IBAction)play
 {
-    //this.play:0;
+    [self play:0];
+    
 }
 
-- (IBAction)play:(NSNumber *) thisTime
+- (NSTimeInterval)getTime
+{
+    return player.currentTime;
+    
+}
+
+- (IBAction)play:(NSTimeInterval) thisTime
 {
     if (!recorder.recording)
     {
@@ -91,6 +110,8 @@
         [player setDelegate:self];
         //[player playAtTime: thisTime];
     }
+    state = PLAYING;
+    [player playAtTime: thisTime];
 }
 
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag

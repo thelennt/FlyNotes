@@ -55,17 +55,19 @@ NSFileManager *filemgr;
 
 -(NSInteger) saveImage:(UIImage*)image filename:(NSString*)file
 {
-    
+    NSError* error = nil;
     NSData *imageData = UIImagePNGRepresentation(image);
-      
-    if (![imageData writeToFile:file atomically:NO])
+    
+    if (![imageData writeToFile:file options:NSDataWritingAtomic error:&error])
     {
+        if ( error )
+            NSLog( @"error = %@", [error description] );
         return -1;
     }
     else
     {
         return 0;
-    }
+   }
 }
 
 

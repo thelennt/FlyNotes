@@ -1,14 +1,10 @@
 //
-//  NSData+MD5.h
-//  UIImage+PDF example
-//
-//  Created by Nigel Barber on 25/06/2013.
-//
+//  Created by Nigel Timothy Barber (@mindbrix) on 13/04/2012.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSString+MD5.h"
 
-@interface NSData (MD5)
+@interface NSString(MD5)
 
 - (NSString *)MD5;
 

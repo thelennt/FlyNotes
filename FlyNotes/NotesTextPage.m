@@ -17,7 +17,7 @@
 @synthesize events;
 @synthesize dimensions;
 
--(id)init: (NSUInteger)anumber Background:(NSString*)abackground
+-(id)init: (NSUInteger)anumber Background:(NSURL*)abackground
 {
     type = @"NotesTextPage";
     number = anumber;
@@ -35,7 +35,7 @@
     return self;
 }
 
--(BOOL)changeBackground:(NSString*)abackground
+-(BOOL)changeBackground:(NSURL*)abackground
 {
     background = abackground;
     return true;

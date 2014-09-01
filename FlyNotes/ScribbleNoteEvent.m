@@ -16,10 +16,12 @@
 @synthesize style;
 @synthesize x;
 @synthesize y;
+@synthesize newSelect;
+
 
 
 XMLWriter* writer;
--(id)init: (NSUInteger)aid TimeStamp:(NSUInteger)atimeStamp Style:(ScribbleStyle*)astyle x:(NSUInteger)lx t:(NSUInteger)ly
+-(id)init: (NSUInteger)aid TimeStamp:(NSTimeInterval)atimeStamp Style:(NSUInteger)astyle x:(NSUInteger)lx y:(NSUInteger)ly newSelect:(bool)anew
 {
     objectid = aid;
     timeStamp = atimeStamp;
@@ -27,6 +29,7 @@ XMLWriter* writer;
     eventType = @"ScribbleNote";
     x = lx;
     y = ly;
+    newSelect = anew;
     
     return self;
 }
@@ -36,9 +39,10 @@ XMLWriter* writer;
 {
     x = [dictionary[@"x"] intValue];
     y = [dictionary[@"y"] intValue];
+    newSelect = [dictionary[@"x"] intValue];
     objectid = [dictionary[@"objectid"] intValue];
     timeStamp = [dictionary[@"timeStamp"] intValue];
-    style = dictionary[@"style"];
+    style = [dictionary[@"style"] intValue];
     eventType = @"ScribbleNote";
 
     return self;
@@ -49,9 +53,10 @@ XMLWriter* writer;
     writer = [[XMLWriter alloc] init];
 
     [writer writeStartElement:eventType];
-    [writer writeAttribute:@"style" value:[NSString stringWithFormat:@"%lu", (unsigned long)[style identifier]]];
+    [writer writeAttribute:@"style" value:[NSString stringWithFormat:@"%lu", (unsigned long)style]];
     [writer writeAttribute:@"objectid" value:[NSString stringWithFormat:@"%lu", (unsigned long)objectid]];
     [writer writeAttribute:@"timeStamp" value:[NSString stringWithFormat:@"%lu", (unsigned long)timeStamp]];
+        [writer writeAttribute:@"new" value:[NSString stringWithFormat:@"%lu", (unsigned long)newSelect]];
     //[writer writeAttribute:@"location" value:[location stringValue]];
     [writer write:[self locationNode]];
     [writer writeEndElement];

@@ -18,8 +18,9 @@
 @synthesize background;
 @synthesize events;
 @synthesize dimensions;
+@synthesize backgroundImage;
 
--(id)init: (NSUInteger)anumber Background:(NSString*)abackground
+-(id)init: (NSUInteger)anumber Background:(NSURL*)abackground
 {
     type = @"NotesScribblePage";
     number = anumber;
@@ -28,6 +29,17 @@
     xEvents = [[NSMutableDictionary alloc]init];
     yEvents = [[NSMutableDictionary alloc]init];
     timeEvents = [[NSMutableDictionary alloc]init];
+    NSError* error;
+    
+    NSData *imageData =[[NSData alloc] initWithContentsOfURL:background options:NSDataWritingAtomic error:&error];
+    if(!imageData)
+    {
+        if ( error )
+            NSLog( @"error = %@", [error description] );
+        return nil;
+    }
+    backgroundImage = [[UIImage alloc] initWithData:imageData];
+    
     
     return self;
 }
@@ -37,12 +49,16 @@
     type = @"NotesScribblePage";
     number = [dictionary[@"number"] intValue];;
     background = dictionary[@"background"];
+    NSData *imageData = [[NSData alloc] initWithContentsOfFile:[background absoluteString]];
+    backgroundImage = [[UIImage alloc] initWithData:imageData];
     return self;
 }
 
--(BOOL)changeBackground:(NSString*)abackground
+-(BOOL)changeBackground:(NSURL*)abackground
 {
     background = abackground;
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL:background];
+    backgroundImage = [[UIImage alloc] initWithData:imageData];
     return true;
 }
 -(BOOL)addEvent:(ScribbleNoteEvent*)aevent
@@ -133,7 +149,7 @@
     [writer writeAttribute:@"type" value:type];
     [writer writeAttribute:@"number" value:[NSString stringWithFormat:@"%lu", (unsigned long)number]];
 
-    [writer writeAttribute:@"background" value:background];
+    [writer writeAttribute:@"background" value:[[NSString alloc] initWithString:[background path]]];
     [writer writeAttribute:@"type" value:type];
     [writer write:[self eventNode]];
     [writer writeEndElement];
